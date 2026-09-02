@@ -1,0 +1,10 @@
+diff a/gradle.properties b/gradle.properties	(rejected hunks)
+@@ -9,7 +9,7 @@ modrinth_id=betterend
+ moddev_version=2.0.73-beta
+ # Minecraft/NeoForge Properties
+ minecraft_version=1.21.1
+-neo_version=21.1.248
++neoforge_version=21.1.248
+ # Mod Properties
+ mod_id=betterend
+ mod_name=Better End
