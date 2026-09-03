@@ -2,8 +2,8 @@ package org.betterx.betterend.blocks;
 
 import org.betterx.bclib.behaviours.BehaviourBuilders;
 import org.betterx.bclib.behaviours.interfaces.BehaviourPlant;
-import org.betterx.bclib.blocks.BlockProperties;
-import org.betterx.bclib.blocks.BlockProperties.PentaShape;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+
 import org.betterx.bclib.util.MHelper;
 import org.betterx.betterend.blocks.basis.EndPlantBlock;
 import org.betterx.betterend.interfaces.survives.SurvivesOnAmberMoss;
@@ -28,7 +28,7 @@ import java.util.List;
 
 public class LanceleafBlock extends EndPlantBlock implements SurvivesOnAmberMoss, BehaviourPlant {
 
-    public static final EnumProperty<PentaShape> SHAPE = BlockProperties.PENTA_SHAPE;
+    public static final EnumProperty<org.betterx.betterend.blocks.properties.PentaShape> SHAPE = BlockProperties.PENTA_SHAPE;
     public static final IntegerProperty ROTATION = BlockProperties.ROTATION;
 
     public LanceleafBlock() {
@@ -42,10 +42,10 @@ public class LanceleafBlock extends EndPlantBlock implements SurvivesOnAmberMoss
 
     @Override
     public boolean canSurvive(BlockState state, LevelReader world, BlockPos pos) {
-        PentaShape shape = state.getValue(SHAPE);
-        if (shape == PentaShape.TOP) {
+        org.betterx.betterend.blocks.properties.PentaShape shape = state.getValue(SHAPE);
+        if (shape == org.betterx.betterend.blocks.properties.PentaShape.TOP) {
             return world.getBlockState(pos.below()).is(this);
-        } else if (shape == PentaShape.BOTTOM) {
+        } else if (shape == org.betterx.betterend.blocks.properties.PentaShape.BOTTOM) {
             return canSurviveOnTop(world, pos) && world.getBlockState(pos.above()).is(this);
         } else {
             return world.getBlockState(pos.below()).is(this) && world.getBlockState(pos.above()).is(this);
@@ -70,7 +70,7 @@ public class LanceleafBlock extends EndPlantBlock implements SurvivesOnAmberMoss
 
     @Override
     public List<ItemStack> getDrops(BlockState state, LootParams.Builder builder) {
-        if (state.getValue(SHAPE) == PentaShape.BOTTOM) {
+        if (state.getValue(SHAPE) == org.betterx.betterend.blocks.properties.PentaShape.BOTTOM) {
             return Collections.singletonList(new ItemStack(EndBlocks.LANCELEAF_SEED));
         }
         return MHelper.RANDOM.nextBoolean() ? Collections.emptyList() : Collections.singletonList(new ItemStack(

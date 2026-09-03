@@ -1,6 +1,6 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.blocks.BlockProperties;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import org.betterx.betterend.registry.EndPortals;
 
 import net.minecraft.util.StringRepresentable;

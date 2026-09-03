@@ -1,8 +1,8 @@
 package org.betterx.betterend.blocks;
 
 import net.minecraft.world.level.block.Block;
-import org.betterx.bclib.blocks.BlockProperties;
-import org.betterx.bclib.blocks.BlockProperties.TripleShape;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+
 import org.betterx.bclib.client.render.BCLRenderLayer;
 import org.betterx.bclib.interfaces.RenderLayerProvider;
 import org.betterx.bclib.util.BlocksHelper;
@@ -44,7 +44,7 @@ import java.util.List;
 
 @SuppressWarnings("deprecation")
 public class NeonCactusPlantBlock extends Block implements SimpleWaterloggedBlock, RenderLayerProvider, PottablePlant {
-    public static final EnumProperty<TripleShape> SHAPE = BlockProperties.TRIPLE_SHAPE;
+    public static final EnumProperty<org.betterx.betterend.blocks.properties.TripleShape> SHAPE = BlockProperties.TRIPLE_SHAPE;
     public static final EnumProperty<CactusBottom> CACTUS_BOTTOM = EndBlockProperties.CACTUS_BOTTOM;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final DirectionProperty FACING = BlockStateProperties.FACING;
@@ -61,7 +61,7 @@ public class NeonCactusPlantBlock extends Block implements SimpleWaterloggedBloc
         super(BlockBehaviour.Properties.copy(Blocks.CACTUS).lightLevel((bs) -> 15).randomTicks());
         registerDefaultState(defaultBlockState().setValue(WATERLOGGED, false)
                                                 .setValue(FACING, Direction.UP)
-                                                .setValue(SHAPE, TripleShape.TOP));
+                                                .setValue(SHAPE, org.betterx.betterend.blocks.properties.TripleShape.TOP));
     }
 
     @Override
@@ -142,20 +142,20 @@ public class NeonCactusPlantBlock extends Block implements SimpleWaterloggedBloc
 
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter view, BlockPos pos, CollisionContext ePos) {
-        TripleShape shape = state.getValue(SHAPE);
+        org.betterx.betterend.blocks.properties.TripleShape shape = state.getValue(SHAPE);
         Direction dir = state.getValue(FACING);
         BlockState next = view.getBlockState(pos.relative(dir));
         if (next.is(this)) {
             Axis axis = dir.getAxis();
-            if (shape == TripleShape.BOTTOM) {
+            if (shape == org.betterx.betterend.blocks.properties.TripleShape.BOTTOM) {
                 return BIG_SHAPES.get(axis);
             }
-            return shape == TripleShape.MIDDLE ? MEDIUM_SHAPES.get(axis) : SMALL_SHAPES.get(axis);
+            return shape == org.betterx.betterend.blocks.properties.TripleShape.MIDDLE ? MEDIUM_SHAPES.get(axis) : SMALL_SHAPES.get(axis);
         } else {
-            if (shape == TripleShape.BOTTOM) {
+            if (shape == org.betterx.betterend.blocks.properties.TripleShape.BOTTOM) {
                 return BIG_SHAPES_OPEN.get(dir);
             }
-            return shape == TripleShape.MIDDLE ? MEDIUM_SHAPES_OPEN.get(dir) : SMALL_SHAPES_OPEN.get(dir);
+            return shape == org.betterx.betterend.blocks.properties.TripleShape.MIDDLE ? MEDIUM_SHAPES_OPEN.get(dir) : SMALL_SHAPES_OPEN.get(dir);
         }
     }
 
@@ -192,14 +192,14 @@ public class NeonCactusPlantBlock extends Block implements SimpleWaterloggedBloc
             Direction side = getSideDirection(world, pos, state, dir, random);
             BlockPos sidePos = pos.relative(side);
             if (world.isEmptyBlock(sidePos)) {
-                BlockState placement = state.setValue(SHAPE, TripleShape.TOP)
+                BlockState placement = state.setValue(SHAPE, org.betterx.betterend.blocks.properties.TripleShape.TOP)
                                             .setValue(CACTUS_BOTTOM, CactusBottom.EMPTY)
                                             .setValue(WATERLOGGED, false)
                                             .setValue(FACING, side);
                 BlocksHelper.setWithoutUpdate(world, sidePos, placement);
             }
         }
-        BlockState placement = state.setValue(SHAPE, TripleShape.TOP)
+        BlockState placement = state.setValue(SHAPE, org.betterx.betterend.blocks.properties.TripleShape.TOP)
                                     .setValue(CACTUS_BOTTOM, CactusBottom.EMPTY)
                                     .setValue(WATERLOGGED, false)
                                     .setValue(FACING, dir);
@@ -262,7 +262,7 @@ public class NeonCactusPlantBlock extends Block implements SimpleWaterloggedBloc
             Direction side = getSideDirection(world, pos, state, dir, random);
             BlockPos sidePos = pos.relative(side);
             if (world.isEmptyBlock(sidePos)) {
-                BlockState placement = state.setValue(SHAPE, TripleShape.TOP)
+                BlockState placement = state.setValue(SHAPE, org.betterx.betterend.blocks.properties.TripleShape.TOP)
                                             .setValue(CACTUS_BOTTOM, CactusBottom.EMPTY)
                                             .setValue(WATERLOGGED, false)
                                             .setValue(FACING, side);
@@ -270,7 +270,7 @@ public class NeonCactusPlantBlock extends Block implements SimpleWaterloggedBloc
                 ends.add(sidePos.mutable());
             }
         }
-        BlockState placement = state.setValue(SHAPE, TripleShape.TOP)
+        BlockState placement = state.setValue(SHAPE, org.betterx.betterend.blocks.properties.TripleShape.TOP)
                                     .setValue(CACTUS_BOTTOM, CactusBottom.EMPTY)
                                     .setValue(WATERLOGGED, false)
                                     .setValue(FACING, dir);
@@ -381,7 +381,7 @@ public class NeonCactusPlantBlock extends Block implements SimpleWaterloggedBloc
             int src = state.getValue(SHAPE).getIndex();
             dir = state.getValue(FACING).getOpposite();
             if (src < size) {
-                TripleShape shape = TripleShape.fromIndex(size);
+                org.betterx.betterend.blocks.properties.TripleShape shape = org.betterx.betterend.blocks.properties.TripleShape.fromIndex(size);
                 BlocksHelper.setWithoutUpdate(world, mut, state.setValue(SHAPE, shape));
             }
         }

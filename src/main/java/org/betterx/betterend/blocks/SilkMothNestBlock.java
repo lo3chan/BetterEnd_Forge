@@ -1,6 +1,6 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.blocks.BaseBlock;
+import net.minecraft.world.level.block.Block;
 import org.betterx.bclib.client.render.BCLRenderLayer;
 import org.betterx.bclib.interfaces.RenderLayerProvider;
 import org.betterx.bclib.interfaces.tools.AddMineableShears;
@@ -46,7 +46,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import java.util.Collections;
 import java.util.List;
 
-public class SilkMothNestBlock extends BaseBlock implements RenderLayerProvider, AddMineableShears {
+public class SilkMothNestBlock extends Block implements RenderLayerProvider, AddMineableShears {
     public static final BooleanProperty ACTIVE = EndBlockProperties.ACTIVE;
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final IntegerProperty FULLNESS = EndBlockProperties.FULLNESS;

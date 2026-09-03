@@ -2,7 +2,7 @@ package org.betterx.betterend.blocks;
 
 import org.betterx.bclib.behaviours.BehaviourBuilders;
 import org.betterx.bclib.behaviours.interfaces.BehaviourPlant;
-import org.betterx.bclib.blocks.BaseDoublePlantBlock;
+import net.minecraft.world.level.block.DoublePlantBlock;
 import org.betterx.bclib.util.BlocksHelper;
 import org.betterx.betterend.blocks.basis.EndPlantBlock;
 import org.betterx.betterend.interfaces.survives.SurvivesOnJungleMossOrMycelium;

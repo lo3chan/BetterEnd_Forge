@@ -1,8 +1,8 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.blocks.BlockProperties;
-import org.betterx.bclib.blocks.BlockProperties.TripleShape;
-import org.betterx.bclib.blocks.UpDownPlantBlock;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+
+import net.minecraft.world.level.block.DoublePlantBlock;
 import org.betterx.betterend.registry.EndBlocks;
 
 import net.minecraft.core.BlockPos;
@@ -16,8 +16,8 @@ import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class GlowingPillarRootsBlock extends UpDownPlantBlock {
-    public static final EnumProperty<TripleShape> SHAPE = BlockProperties.TRIPLE_SHAPE;
+public class GlowingPillarRootsBlock extends DoublePlantBlock {
+    public static final EnumProperty<org.betterx.betterend.blocks.properties.TripleShape> SHAPE = BlockProperties.TRIPLE_SHAPE;
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> stateManager) {

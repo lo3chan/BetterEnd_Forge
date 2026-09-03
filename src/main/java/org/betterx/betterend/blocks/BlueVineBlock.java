@@ -1,7 +1,7 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.blocks.BlockProperties;
-import org.betterx.bclib.blocks.UpDownPlantBlock;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.DoublePlantBlock;
 import org.betterx.betterend.registry.EndBlocks;
 
 import net.minecraft.core.BlockPos;
@@ -12,8 +12,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 
-public class BlueVineBlock extends UpDownPlantBlock {
-    public static final EnumProperty<BlockProperties.TripleShape> SHAPE = BlockProperties.TRIPLE_SHAPE;
+public class BlueVineBlock extends DoublePlantBlock {
+    public static final EnumProperty<BlockProperties.org.betterx.betterend.blocks.properties.TripleShape> SHAPE = BlockProperties.TRIPLE_SHAPE;
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> stateManager) {

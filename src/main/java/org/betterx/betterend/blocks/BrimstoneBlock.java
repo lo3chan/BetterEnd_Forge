@@ -1,7 +1,7 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.blocks.BaseBlock;
-import org.betterx.bclib.blocks.BlockProperties;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import org.betterx.bclib.util.BlocksHelper;
 import org.betterx.betterend.registry.EndBlocks;
 
@@ -26,7 +26,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 
 import org.jetbrains.annotations.Nullable;
 
-public class BrimstoneBlock extends BaseBlock.Stone {
+public class BrimstoneBlock extends Block.Stone {
     public static final BooleanProperty ACTIVATED = BlockProperties.ACTIVE;
 
     public BrimstoneBlock() {

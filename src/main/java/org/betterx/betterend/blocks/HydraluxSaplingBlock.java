@@ -1,7 +1,7 @@
 package org.betterx.betterend.blocks;
 
 import org.betterx.bclib.behaviours.interfaces.BehaviourWaterPlantSapling;
-import org.betterx.bclib.blocks.UnderwaterPlantWithAgeBlock;
+import net.minecraft.world.level.block.KelpBlock;
 import org.betterx.bclib.interfaces.SurvivesOnSpecialGround;
 import org.betterx.bclib.util.BlocksHelper;
 import org.betterx.bclib.util.MHelper;
@@ -22,7 +22,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import java.util.List;
 import org.jetbrains.annotations.Nullable;
 
-public class HydraluxSaplingBlock extends UnderwaterPlantWithAgeBlock implements BehaviourWaterPlantSapling, SurvivesOnSulphuricRock {
+public class HydraluxSaplingBlock extends KelpBlock implements BehaviourWaterPlantSapling, SurvivesOnSulphuricRock {
 
     @Override
     public void grow(WorldGenLevel world, RandomSource random, BlockPos pos) {

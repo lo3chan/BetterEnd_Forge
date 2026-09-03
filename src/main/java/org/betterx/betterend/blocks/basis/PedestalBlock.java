@@ -1,7 +1,7 @@
 package org.betterx.betterend.blocks.basis;
 
 import net.minecraft.world.level.block.Block;
-import org.betterx.bclib.blocks.BlockProperties;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import org.betterx.bclib.client.models.ModelsHelper;
 import org.betterx.bclib.interfaces.TagProvider;
 import org.betterx.betterend.blocks.EndBlockProperties;

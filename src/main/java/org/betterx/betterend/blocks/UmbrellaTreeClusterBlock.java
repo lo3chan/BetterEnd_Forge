@@ -1,7 +1,7 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.blocks.BaseBlock;
-import org.betterx.bclib.blocks.BlockProperties;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import org.betterx.bclib.util.BlocksHelper;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndItems;
@@ -25,7 +25,7 @@ import net.minecraft.world.phys.BlockHitResult;
 
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
-public class UmbrellaTreeClusterBlock extends BaseBlock.Wood {
+public class UmbrellaTreeClusterBlock extends Block.Wood {
     public static final BooleanProperty NATURAL = BlockProperties.NATURAL;
 
     public UmbrellaTreeClusterBlock() {

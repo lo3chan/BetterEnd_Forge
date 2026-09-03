@@ -2,8 +2,8 @@ package org.betterx.betterend.blocks;
 
 import org.betterx.bclib.behaviours.BehaviourBuilders;
 import org.betterx.bclib.behaviours.interfaces.BehaviourLeaves;
-import org.betterx.bclib.blocks.BaseBlock;
-import org.betterx.bclib.blocks.BaseLeavesBlock;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.LeavesBlock;
 import org.betterx.bclib.interfaces.CustomColorProvider;
 import org.betterx.bclib.interfaces.tools.AddMineableShears;
 import org.betterx.bclib.util.MHelper;
@@ -28,7 +28,7 @@ import net.minecraft.world.level.storage.loot.LootParams;
 
 import java.util.List;
 
-public class HelixTreeLeavesBlock extends BaseBlock implements BehaviourLeaves, CustomColorProvider, AddMineableShears {
+public class HelixTreeLeavesBlock extends Block implements BehaviourLeaves, CustomColorProvider, AddMineableShears {
     public static final IntegerProperty COLOR = EndBlockProperties.COLOR;
     private static final OpenSimplexNoise NOISE = new OpenSimplexNoise(0);
 

@@ -2,7 +2,7 @@ package org.betterx.betterend.blocks;
 
 import org.betterx.bclib.behaviours.BehaviourBuilders;
 import org.betterx.bclib.behaviours.interfaces.BehaviourWaterPlant;
-import org.betterx.bclib.blocks.UnderwaterPlantBlock;
+import net.minecraft.world.level.block.WaterlilyBlock;
 import org.betterx.bclib.interfaces.tools.AddMineableShears;
 import org.betterx.bclib.util.MHelper;
 import org.betterx.betterend.blocks.EndBlockProperties.HydraluxShape;
@@ -30,7 +30,7 @@ import com.google.common.collect.Lists;
 import java.util.Collections;
 import java.util.List;
 
-public class HydraluxBlock extends UnderwaterPlantBlock implements BehaviourWaterPlant, AddMineableShears {
+public class HydraluxBlock extends WaterlilyBlock implements BehaviourWaterPlant, AddMineableShears {
 
     public static final EnumProperty<HydraluxShape> SHAPE = EndBlockProperties.HYDRALUX_SHAPE;
 

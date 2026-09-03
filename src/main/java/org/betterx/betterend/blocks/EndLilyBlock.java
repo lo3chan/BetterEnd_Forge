@@ -2,8 +2,8 @@ package org.betterx.betterend.blocks;
 
 import org.betterx.bclib.behaviours.BehaviourBuilders;
 import org.betterx.bclib.behaviours.interfaces.BehaviourWaterPlant;
-import org.betterx.bclib.blocks.BlockProperties;
-import org.betterx.bclib.blocks.BlockProperties.TripleShape;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+
 import org.betterx.bclib.interfaces.tools.AddMineableShears;
 import org.betterx.bclib.util.MHelper;
 import org.betterx.betterend.blocks.basis.EndUnderwaterPlantBlock;
@@ -40,14 +40,14 @@ import java.util.Collections;
 import java.util.List;
 
 public class EndLilyBlock extends EndUnderwaterPlantBlock implements BehaviourWaterPlant, AddMineableShears, SurvivesOnEndStone {
-    public static final EnumProperty<TripleShape> SHAPE = BlockProperties.TRIPLE_SHAPE;
+    public static final EnumProperty<org.betterx.betterend.blocks.properties.TripleShape> SHAPE = BlockProperties.TRIPLE_SHAPE;
     private static final VoxelShape SHAPE_BOTTOM = Block.box(4, 0, 4, 12, 16, 12);
     private static final VoxelShape SHAPE_TOP = Block.box(2, 0, 2, 14, 6, 14);
 
     public EndLilyBlock() {
         super(BehaviourBuilders
                 .createWaterPlant()
-                .lightLevel((state) -> state.getValue(SHAPE) == TripleShape.TOP ? 13 : 0)
+                .lightLevel((state) -> state.getValue(SHAPE) == org.betterx.betterend.blocks.properties.TripleShape.TOP ? 13 : 0)
         );
     }
 
@@ -61,7 +61,7 @@ public class EndLilyBlock extends EndUnderwaterPlantBlock implements BehaviourWa
             BlockPos neighborPos
     ) {
         if (!canSurvive(state, world, pos)) {
-            return state.getValue(SHAPE) == TripleShape.TOP
+            return state.getValue(SHAPE) == org.betterx.betterend.blocks.properties.TripleShape.TOP
                     ? Blocks.AIR.defaultBlockState()
                     : Blocks.WATER.defaultBlockState();
         } else {
@@ -72,7 +72,7 @@ public class EndLilyBlock extends EndUnderwaterPlantBlock implements BehaviourWa
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter view, BlockPos pos, CollisionContext ePos) {
         Vec3 vec3d = state.getOffset(view, pos);
-        VoxelShape shape = state.getValue(SHAPE) == TripleShape.TOP ? SHAPE_TOP : SHAPE_BOTTOM;
+        VoxelShape shape = state.getValue(SHAPE) == org.betterx.betterend.blocks.properties.TripleShape.TOP ? SHAPE_TOP : SHAPE_BOTTOM;
         return shape.move(vec3d.x, vec3d.y, vec3d.z);
     }
 
@@ -83,15 +83,15 @@ public class EndLilyBlock extends EndUnderwaterPlantBlock implements BehaviourWa
 
     @Override
     public FluidState getFluidState(BlockState state) {
-        return state.getValue(SHAPE) == TripleShape.TOP ? Fluids.EMPTY.defaultFluidState() : Fluids.WATER.getSource(
+        return state.getValue(SHAPE) == org.betterx.betterend.blocks.properties.TripleShape.TOP ? Fluids.EMPTY.defaultFluidState() : Fluids.WATER.getSource(
                 false);
     }
 
     @Override
     public boolean canSurvive(BlockState state, LevelReader world, BlockPos pos) {
-        if (state.getValue(SHAPE) == TripleShape.TOP) {
+        if (state.getValue(SHAPE) == org.betterx.betterend.blocks.properties.TripleShape.TOP) {
             return world.getBlockState(pos.below()).getBlock() == this;
-        } else if (state.getValue(SHAPE) == TripleShape.BOTTOM) {
+        } else if (state.getValue(SHAPE) == org.betterx.betterend.blocks.properties.TripleShape.BOTTOM) {
             return isTerrain(world.getBlockState(pos.below()));
         } else {
             BlockState up = world.getBlockState(pos.above());
@@ -102,7 +102,7 @@ public class EndLilyBlock extends EndUnderwaterPlantBlock implements BehaviourWa
 
     @Override
     public List<ItemStack> getDrops(BlockState state, LootParams.Builder builder) {
-        if (state.getValue(SHAPE) == TripleShape.TOP) {
+        if (state.getValue(SHAPE) == org.betterx.betterend.blocks.properties.TripleShape.TOP) {
             return Lists.newArrayList(
                     new ItemStack(EndItems.END_LILY_LEAF, MHelper.randRange(1, 2, MHelper.RANDOM_SOURCE)),
                     new ItemStack(EndBlocks.END_LILY_SEED, MHelper.randRange(1, 2, MHelper.RANDOM_SOURCE))

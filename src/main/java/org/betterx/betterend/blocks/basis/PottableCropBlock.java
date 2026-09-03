@@ -1,7 +1,7 @@
 package org.betterx.betterend.blocks.basis;
 
 import org.betterx.bclib.behaviours.interfaces.BehaviourSeed;
-import org.betterx.bclib.blocks.BaseCropBlock;
+import net.minecraft.world.level.block.CropBlock;
 import org.betterx.bclib.interfaces.SurvivesOnBlocks;
 import org.betterx.betterend.interfaces.PottablePlant;
 
@@ -10,7 +10,7 @@ import net.minecraft.world.level.block.Block;
 
 import java.util.List;
 
-public class PottableCropBlock extends BaseCropBlock implements PottablePlant, BehaviourSeed, SurvivesOnBlocks {
+public class PottableCropBlock extends CropBlock implements PottablePlant, BehaviourSeed, SurvivesOnBlocks {
     private final List<Block> terrain;
 
     public PottableCropBlock(Item drop, Block... terrain) {

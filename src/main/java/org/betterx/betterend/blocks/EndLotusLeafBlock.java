@@ -3,8 +3,8 @@ package org.betterx.betterend.blocks;
 import org.betterx.bclib.behaviours.BehaviourBuilders;
 import org.betterx.bclib.behaviours.interfaces.BehaviourPlant;
 import net.minecraft.world.level.block.Block;
-import org.betterx.bclib.blocks.BlockProperties;
-import org.betterx.bclib.blocks.BlockProperties.TripleShape;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+
 import org.betterx.bclib.client.render.BCLRenderLayer;
 import org.betterx.bclib.interfaces.RenderLayerProvider;
 import org.betterx.bclib.util.BlocksHelper;
@@ -33,7 +33,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class EndLotusLeafBlock extends Block implements RenderLayerProvider, BehaviourPlant {
     public static final EnumProperty<Direction> HORIZONTAL_FACING = BlockStateProperties.HORIZONTAL_FACING;
-    public static final EnumProperty<TripleShape> SHAPE = BlockProperties.TRIPLE_SHAPE;
+    public static final EnumProperty<org.betterx.betterend.blocks.properties.TripleShape> SHAPE = BlockProperties.TRIPLE_SHAPE;
     private static final VoxelShape VSHAPE = Block.box(0, 0, 0, 16, 1, 16);
 
     public EndLotusLeafBlock() {

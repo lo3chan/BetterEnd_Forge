@@ -1,7 +1,7 @@
 package org.betterx.betterend.blocks;
 
 import org.betterx.bclib.behaviours.interfaces.BehaviourObsidian;
-import org.betterx.bclib.blocks.BaseBlock;
+import net.minecraft.world.level.block.Block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -23,7 +23,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import java.util.Collections;
 import java.util.List;
 
-public class MossyObsidian extends BaseBlock implements BehaviourObsidian {
+public class MossyObsidian extends Block implements BehaviourObsidian {
     public MossyObsidian() {
         super(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).destroyTime(3).randomTicks());
     }

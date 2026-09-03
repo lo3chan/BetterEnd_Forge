@@ -1,7 +1,7 @@
 package org.betterx.betterend.blocks;
 
 import org.betterx.bclib.behaviours.interfaces.BehaviourStone;
-import org.betterx.bclib.blocks.BaseRotatedPillarBlock;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import org.betterx.betterend.registry.EndBlocks;
 
 import net.minecraft.core.BlockPos;
@@ -25,7 +25,7 @@ import java.util.Collections;
 import java.util.List;
 
 @SuppressWarnings("deprecation")
-public class MossyDragonBoneBlock extends BaseRotatedPillarBlock implements BehaviourStone {
+public class MossyDragonBoneBlock extends RotatedPillarBlock implements BehaviourStone {
     public MossyDragonBoneBlock() {
         super(BlockBehaviour.Properties.copy(Blocks.BONE_BLOCK).destroyTime(0.5F).randomTicks());
     }

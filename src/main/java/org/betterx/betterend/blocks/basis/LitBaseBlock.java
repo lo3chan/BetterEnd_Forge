@@ -1,6 +1,6 @@
 package org.betterx.betterend.blocks.basis;
 
-import org.betterx.bclib.blocks.BaseBlock;
+import net.minecraft.world.level.block.Block;
 
 import net.minecraft.client.renderer.block.model.BlockModel;
 import net.minecraft.resources.ResourceLocation;
@@ -11,7 +11,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import org.jetbrains.annotations.Nullable;
 
-public class LitBaseBlock extends BaseBlock {
+public class LitBaseBlock extends Block {
     private static final String PATTERN = "{\"parent\":\"betterend:block/cube_noshade\",\"textures\":{\"texture\":\"betterend:block/name\"}}";
 
     public LitBaseBlock(Properties settings) {

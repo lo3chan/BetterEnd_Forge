@@ -2,7 +2,7 @@ package org.betterx.betterend.blocks;
 
 import org.betterx.bclib.behaviours.BehaviourBuilders;
 import net.minecraft.world.level.block.Block;
-import org.betterx.bclib.blocks.BlockProperties;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import org.betterx.bclib.util.BlocksHelper;
 import org.betterx.betterend.blocks.entities.BlockEntityHydrothermalVent;
 import org.betterx.betterend.registry.EndBlocks;

@@ -2,8 +2,8 @@ package org.betterx.betterend.blocks;
 
 import org.betterx.bclib.behaviours.BehaviourBuilders;
 import org.betterx.bclib.behaviours.interfaces.BehaviourSeed;
-import org.betterx.bclib.blocks.BlockProperties;
-import org.betterx.bclib.blocks.BlockProperties.TripleShape;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+
 import org.betterx.bclib.interfaces.tools.AddMineableShears;
 import org.betterx.bclib.util.BlocksHelper;
 import org.betterx.bclib.util.MHelper;
@@ -44,11 +44,11 @@ public class GlowingPillarSeedBlock extends EndPlantWithAgeBlock implements AddM
         MutableBlockPos mut = new MutableBlockPos().set(pos);
         BlockState roots = EndBlocks.GLOWING_PILLAR_ROOTS.defaultBlockState();
         if (height < 2) {
-            BlocksHelper.setWithUpdate(world, mut, roots.setValue(BlockProperties.TRIPLE_SHAPE, TripleShape.MIDDLE));
+            BlocksHelper.setWithUpdate(world, mut, roots.setValue(BlockProperties.TRIPLE_SHAPE, org.betterx.betterend.blocks.properties.TripleShape.MIDDLE));
         } else {
-            BlocksHelper.setWithUpdate(world, mut, roots.setValue(BlockProperties.TRIPLE_SHAPE, TripleShape.BOTTOM));
+            BlocksHelper.setWithUpdate(world, mut, roots.setValue(BlockProperties.TRIPLE_SHAPE, org.betterx.betterend.blocks.properties.TripleShape.BOTTOM));
             mut.move(Direction.UP);
-            BlocksHelper.setWithUpdate(world, mut, roots.setValue(BlockProperties.TRIPLE_SHAPE, TripleShape.TOP));
+            BlocksHelper.setWithUpdate(world, mut, roots.setValue(BlockProperties.TRIPLE_SHAPE, org.betterx.betterend.blocks.properties.TripleShape.TOP));
         }
         mut.move(Direction.UP);
         BlocksHelper.setWithUpdate(

@@ -1,11 +1,11 @@
 package org.betterx.betterend.blocks.basis;
 
-import org.betterx.bclib.blocks.BasePlantBlock;
+import net.minecraft.world.level.block.BushBlock;
 import org.betterx.betterend.interfaces.PottablePlant;
 
 import net.minecraft.world.level.block.Block;
 
-public abstract class EndPlantBlock extends BasePlantBlock implements PottablePlant {
+public abstract class EndPlantBlock extends BushBlock implements PottablePlant {
     protected EndPlantBlock(Properties props) {
         super(props);
     }

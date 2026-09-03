@@ -2,8 +2,8 @@ package org.betterx.betterend.blocks;
 
 import org.betterx.bclib.behaviours.BehaviourBuilders;
 import org.betterx.bclib.behaviours.interfaces.BehaviourPlant;
-import org.betterx.bclib.blocks.BlockProperties;
-import org.betterx.bclib.blocks.BlockProperties.TripleShape;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+
 import org.betterx.betterend.blocks.basis.EndPlantBlock;
 import org.betterx.betterend.interfaces.survives.SurvivesOnEndBone;
 
@@ -22,7 +22,7 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class LargeAmaranitaBlock extends EndPlantBlock implements BehaviourPlant, SurvivesOnEndBone {
-    public static final EnumProperty<TripleShape> SHAPE = BlockProperties.TRIPLE_SHAPE;
+    public static final EnumProperty<org.betterx.betterend.blocks.properties.TripleShape> SHAPE = BlockProperties.TRIPLE_SHAPE;
     private static final VoxelShape SHAPE_BOTTOM = Block.box(4, 0, 4, 12, 14, 12);
     private static final VoxelShape SHAPE_TOP = Shapes.or(Block.box(1, 3, 1, 15, 16, 15), SHAPE_BOTTOM);
 
@@ -30,13 +30,13 @@ public class LargeAmaranitaBlock extends EndPlantBlock implements BehaviourPlant
         super(BehaviourBuilders
                 .createWalkablePlant(MapColor.COLOR_RED)
                 .ignitedByLava()
-                .lightLevel((state) -> (state.getValue(SHAPE) == TripleShape.TOP) ? 15 : 0)
+                .lightLevel((state) -> (state.getValue(SHAPE) == org.betterx.betterend.blocks.properties.TripleShape.TOP) ? 15 : 0)
         );
     }
 
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter view, BlockPos pos, CollisionContext ePos) {
-        return state.getValue(SHAPE) == TripleShape.TOP ? SHAPE_TOP : SHAPE_BOTTOM;
+        return state.getValue(SHAPE) == org.betterx.betterend.blocks.properties.TripleShape.TOP ? SHAPE_TOP : SHAPE_BOTTOM;
     }
 
     @Override
@@ -46,10 +46,10 @@ public class LargeAmaranitaBlock extends EndPlantBlock implements BehaviourPlant
 
     @Override
     public boolean canSurvive(BlockState state, LevelReader world, BlockPos pos) {
-        TripleShape shape = state.getValue(SHAPE);
-        if (shape == TripleShape.BOTTOM) {
+        org.betterx.betterend.blocks.properties.TripleShape shape = state.getValue(SHAPE);
+        if (shape == org.betterx.betterend.blocks.properties.TripleShape.BOTTOM) {
             return isTerrain(world.getBlockState(pos.below())) && world.getBlockState(pos.above()).is(this);
-        } else if (shape == TripleShape.TOP) {
+        } else if (shape == org.betterx.betterend.blocks.properties.TripleShape.TOP) {
             return world.getBlockState(pos.below()).is(this);
         } else {
             return world.getBlockState(pos.below()).is(this) && world.getBlockState(pos.above()).is(this);

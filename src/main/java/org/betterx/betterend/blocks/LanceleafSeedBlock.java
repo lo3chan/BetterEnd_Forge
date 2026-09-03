@@ -2,8 +2,8 @@ package org.betterx.betterend.blocks;
 
 import org.betterx.bclib.behaviours.BehaviourBuilders;
 import org.betterx.bclib.behaviours.interfaces.BehaviourSeed;
-import org.betterx.bclib.blocks.BlockProperties;
-import org.betterx.bclib.blocks.BlockProperties.PentaShape;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+
 import org.betterx.bclib.util.BlocksHelper;
 import org.betterx.bclib.util.MHelper;
 import org.betterx.betterend.blocks.basis.EndPlantWithAgeBlock;
@@ -33,28 +33,28 @@ public class LanceleafSeedBlock extends EndPlantWithAgeBlock implements Survives
         int rotation = random.nextInt(4);
         MutableBlockPos mut = new MutableBlockPos().set(pos);
         BlockState plant = EndBlocks.LANCELEAF.defaultBlockState().setValue(BlockProperties.ROTATION, rotation);
-        BlocksHelper.setWithoutUpdate(world, mut, plant.setValue(BlockProperties.PENTA_SHAPE, PentaShape.BOTTOM));
+        BlocksHelper.setWithoutUpdate(world, mut, plant.setValue(BlockProperties.PENTA_SHAPE, org.betterx.betterend.blocks.properties.PentaShape.BOTTOM));
         BlocksHelper.setWithoutUpdate(
                 world,
                 mut.move(Direction.UP),
-                plant.setValue(BlockProperties.PENTA_SHAPE, PentaShape.PRE_BOTTOM)
+                plant.setValue(BlockProperties.PENTA_SHAPE, org.betterx.betterend.blocks.properties.PentaShape.PRE_BOTTOM)
         );
         for (int i = 2; i < height - 2; i++) {
             BlocksHelper.setWithoutUpdate(
                     world,
                     mut.move(Direction.UP),
-                    plant.setValue(BlockProperties.PENTA_SHAPE, PentaShape.MIDDLE)
+                    plant.setValue(BlockProperties.PENTA_SHAPE, org.betterx.betterend.blocks.properties.PentaShape.MIDDLE)
             );
         }
         BlocksHelper.setWithoutUpdate(
                 world,
                 mut.move(Direction.UP),
-                plant.setValue(BlockProperties.PENTA_SHAPE, PentaShape.PRE_TOP)
+                plant.setValue(BlockProperties.PENTA_SHAPE, org.betterx.betterend.blocks.properties.PentaShape.PRE_TOP)
         );
         BlocksHelper.setWithoutUpdate(
                 world,
                 mut.move(Direction.UP),
-                plant.setValue(BlockProperties.PENTA_SHAPE, PentaShape.TOP)
+                plant.setValue(BlockProperties.PENTA_SHAPE, org.betterx.betterend.blocks.properties.PentaShape.TOP)
         );
     }
 

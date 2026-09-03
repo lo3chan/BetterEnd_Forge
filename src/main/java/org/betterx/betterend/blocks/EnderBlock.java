@@ -12,7 +12,7 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class EnderBlock extends BaseBlock.Stone {
+public class EnderBlock extends Block.Stone {
 
     public EnderBlock() {
         super(BehaviourBuilders

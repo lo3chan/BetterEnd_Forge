@@ -1,9 +1,9 @@
 package org.betterx.betterend.blocks;
 
 import org.betterx.bclib.behaviours.interfaces.BehaviourWood;
-import org.betterx.bclib.blocks.BaseBlock;
-import org.betterx.bclib.blocks.BlockProperties;
-import org.betterx.bclib.blocks.BlockProperties.TripleShape;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+
 import org.betterx.bclib.client.render.BCLRenderLayer;
 import org.betterx.bclib.interfaces.RenderLayerProvider;
 import org.betterx.bclib.util.BlocksHelper;
@@ -31,17 +31,17 @@ import com.google.common.collect.Maps;
 
 import java.util.Map;
 
-public class EndLotusStemBlock extends BaseBlock implements SimpleWaterloggedBlock, RenderLayerProvider, BehaviourWood {
+public class EndLotusStemBlock extends Block implements SimpleWaterloggedBlock, RenderLayerProvider, BehaviourWood {
     public static final EnumProperty<Direction> FACING = BlockStateProperties.FACING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final BooleanProperty LEAF = BooleanProperty.create("leaf");
-    public static final EnumProperty<TripleShape> SHAPE = BlockProperties.TRIPLE_SHAPE;
+    public static final EnumProperty<org.betterx.betterend.blocks.properties.TripleShape> SHAPE = BlockProperties.TRIPLE_SHAPE;
     private static final Map<Axis, VoxelShape> SHAPES = Maps.newEnumMap(Axis.class);
 
     public EndLotusStemBlock() {
         super(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS));
         this.registerDefaultState(defaultBlockState().setValue(WATERLOGGED, false)
-                                                     .setValue(SHAPE, TripleShape.MIDDLE)
+                                                     .setValue(SHAPE, org.betterx.betterend.blocks.properties.TripleShape.MIDDLE)
                                                      .setValue(LEAF, false)
                                                      .setValue(FACING, Direction.UP));
     }

@@ -2,7 +2,7 @@ package org.betterx.betterend.blocks;
 
 import org.betterx.bclib.behaviours.BehaviourBuilders;
 import org.betterx.bclib.behaviours.interfaces.BehaviourSeed;
-import org.betterx.bclib.blocks.BlockProperties;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import org.betterx.bclib.util.BlocksHelper;
 import org.betterx.bclib.util.MHelper;
 import org.betterx.betterend.blocks.basis.EndPlantWithAgeBlock;
@@ -33,21 +33,21 @@ public class BlueVineSeedBlock extends EndPlantWithAgeBlock implements SurvivesO
                 world,
                 pos,
                 EndBlocks.BLUE_VINE.defaultBlockState()
-                                   .setValue(BlockProperties.TRIPLE_SHAPE, BlockProperties.TripleShape.BOTTOM)
+                                   .setValue(BlockProperties.TRIPLE_SHAPE, BlockProperties.org.betterx.betterend.blocks.properties.TripleShape.BOTTOM)
         );
         for (int i = 1; i < height; i++) {
             BlocksHelper.setWithoutUpdate(
                     world,
                     pos.above(i),
                     EndBlocks.BLUE_VINE.defaultBlockState()
-                                       .setValue(BlockProperties.TRIPLE_SHAPE, BlockProperties.TripleShape.MIDDLE)
+                                       .setValue(BlockProperties.TRIPLE_SHAPE, BlockProperties.org.betterx.betterend.blocks.properties.TripleShape.MIDDLE)
             );
         }
         BlocksHelper.setWithoutUpdate(
                 world,
                 pos.above(height),
                 EndBlocks.BLUE_VINE.defaultBlockState()
-                                   .setValue(BlockProperties.TRIPLE_SHAPE, BlockProperties.TripleShape.TOP)
+                                   .setValue(BlockProperties.TRIPLE_SHAPE, BlockProperties.org.betterx.betterend.blocks.properties.TripleShape.TOP)
         );
         placeLantern(world, pos.above(height + 1));
     }

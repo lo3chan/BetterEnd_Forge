@@ -1,7 +1,7 @@
 package org.betterx.betterend.blocks;
 
 import org.betterx.bclib.behaviours.interfaces.BehaviourIce;
-import org.betterx.bclib.blocks.BaseBlock;
+import net.minecraft.world.level.block.Block;
 import org.betterx.bclib.client.render.BCLRenderLayer;
 import org.betterx.bclib.interfaces.RenderLayerProvider;
 
@@ -18,7 +18,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import java.util.Collections;
 import java.util.List;
 
-public class DenseEmeraldIceBlock extends BaseBlock implements RenderLayerProvider, BehaviourIce {
+public class DenseEmeraldIceBlock extends Block implements RenderLayerProvider, BehaviourIce {
     public DenseEmeraldIceBlock() {
         super(BlockBehaviour.Properties.copy(Blocks.PACKED_ICE));
     }

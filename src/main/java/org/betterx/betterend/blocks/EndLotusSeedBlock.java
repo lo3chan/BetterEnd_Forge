@@ -1,8 +1,8 @@
 package org.betterx.betterend.blocks;
 
 import org.betterx.bclib.behaviours.interfaces.BehaviourWaterPlantSeed;
-import org.betterx.bclib.blocks.BlockProperties.TripleShape;
-import org.betterx.bclib.blocks.UnderwaterPlantWithAgeBlock;
+
+import net.minecraft.world.level.block.KelpBlock;
 import org.betterx.bclib.util.BlocksHelper;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.worlds.together.tag.v3.CommonBlockTags;
@@ -15,13 +15,13 @@ import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
 
-public class EndLotusSeedBlock extends UnderwaterPlantWithAgeBlock implements BehaviourWaterPlantSeed {
+public class EndLotusSeedBlock extends KelpBlock implements BehaviourWaterPlantSeed {
     @Override
     public void grow(WorldGenLevel world, RandomSource random, BlockPos pos) {
         if (canGrow(world, pos)) {
             BlockState startLeaf = EndBlocks.END_LOTUS_STEM.defaultBlockState().setValue(EndLotusStemBlock.LEAF, true);
             BlockState roots = EndBlocks.END_LOTUS_STEM.defaultBlockState()
-                                                       .setValue(EndLotusStemBlock.SHAPE, TripleShape.BOTTOM)
+                                                       .setValue(EndLotusStemBlock.SHAPE, org.betterx.betterend.blocks.properties.TripleShape.BOTTOM)
                                                        .setValue(EndLotusStemBlock.WATERLOGGED, true);
             BlockState stem = EndBlocks.END_LOTUS_STEM.defaultBlockState();
             BlockState flower = EndBlocks.END_LOTUS_FLOWER.defaultBlockState();
@@ -35,7 +35,7 @@ public class EndLotusSeedBlock extends UnderwaterPlantWithAgeBlock implements Be
             }
 
             int height = random.nextBoolean() ? 0 : random.nextBoolean() ? 1 : random.nextBoolean() ? 1 : -1;
-            TripleShape shape = (height == 0) ? TripleShape.TOP : TripleShape.MIDDLE;
+            org.betterx.betterend.blocks.properties.TripleShape shape = (height == 0) ? org.betterx.betterend.blocks.properties.TripleShape.TOP : org.betterx.betterend.blocks.properties.TripleShape.MIDDLE;
             Direction dir = BlocksHelper.randomHorizontal(random);
             BlockPos leafCenter = bpos.immutable().relative(dir);
             if (hasLeaf(world, leafCenter)) {
@@ -56,7 +56,7 @@ public class EndLotusSeedBlock extends UnderwaterPlantWithAgeBlock implements Be
                     BlocksHelper.setWithoutUpdate(world, bpos, flower);
                     bpos.setY(bpos.getY() - 1);
                     stem = world.getBlockState(bpos);
-                    BlocksHelper.setWithoutUpdate(world, bpos, stem.setValue(EndLotusStemBlock.SHAPE, TripleShape.TOP));
+                    BlocksHelper.setWithoutUpdate(world, bpos, stem.setValue(EndLotusStemBlock.SHAPE, org.betterx.betterend.blocks.properties.TripleShape.TOP));
                     return;
                 }
                 BlocksHelper.setWithoutUpdate(world, bpos, stem);
@@ -81,7 +81,7 @@ public class EndLotusSeedBlock extends UnderwaterPlantWithAgeBlock implements Be
                 stem = stem.setValue(EndLotusStemBlock.LEAF, true).setValue(EndLotusStemBlock.FACING, dir);
             }
 
-            BlocksHelper.setWithoutUpdate(world, bpos, stem.setValue(EndLotusStemBlock.SHAPE, TripleShape.TOP));
+            BlocksHelper.setWithoutUpdate(world, bpos, stem.setValue(EndLotusStemBlock.SHAPE, org.betterx.betterend.blocks.properties.TripleShape.TOP));
         }
     }
 
@@ -97,13 +97,13 @@ public class EndLotusSeedBlock extends UnderwaterPlantWithAgeBlock implements Be
     private void generateLeaf(WorldGenLevel world, BlockPos pos) {
         MutableBlockPos p = new MutableBlockPos();
         BlockState leaf = EndBlocks.END_LOTUS_LEAF.defaultBlockState();
-        BlocksHelper.setWithoutUpdate(world, pos, leaf.setValue(EndLotusLeafBlock.SHAPE, TripleShape.BOTTOM));
+        BlocksHelper.setWithoutUpdate(world, pos, leaf.setValue(EndLotusLeafBlock.SHAPE, org.betterx.betterend.blocks.properties.TripleShape.BOTTOM));
         for (Direction move : BlocksHelper.HORIZONTAL) {
             BlocksHelper.setWithoutUpdate(
                     world,
                     p.set(pos).move(move),
                     leaf.setValue(EndLotusLeafBlock.HORIZONTAL_FACING, move)
-                        .setValue(EndLotusLeafBlock.SHAPE, TripleShape.MIDDLE)
+                        .setValue(EndLotusLeafBlock.SHAPE, org.betterx.betterend.blocks.properties.TripleShape.MIDDLE)
             );
         }
         for (int i = 0; i < 4; i++) {
@@ -113,7 +113,7 @@ public class EndLotusSeedBlock extends UnderwaterPlantWithAgeBlock implements Be
                     world,
                     p.set(pos).move(d1).move(d2),
                     leaf.setValue(EndLotusLeafBlock.HORIZONTAL_FACING, d1)
-                        .setValue(EndLotusLeafBlock.SHAPE, TripleShape.TOP)
+                        .setValue(EndLotusLeafBlock.SHAPE, org.betterx.betterend.blocks.properties.TripleShape.TOP)
             );
         }
     }

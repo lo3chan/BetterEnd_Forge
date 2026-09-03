@@ -1,8 +1,8 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.blocks.BaseBlock;
-import org.betterx.bclib.blocks.BlockProperties;
-import org.betterx.bclib.blocks.BlockProperties.TripleShape;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+
 import org.betterx.bclib.client.render.BCLRenderLayer;
 import org.betterx.bclib.interfaces.CustomColorProvider;
 import org.betterx.bclib.interfaces.RenderLayerProvider;
@@ -48,22 +48,22 @@ import com.google.common.collect.Lists;
 import java.util.List;
 import org.jetbrains.annotations.Nullable;
 
-public class RespawnObeliskBlock extends BaseBlock.Stone implements CustomColorProvider, RenderLayerProvider {
+public class RespawnObeliskBlock extends Block.Stone implements CustomColorProvider, RenderLayerProvider {
     private static final VoxelShape VOXEL_SHAPE_BOTTOM = Block.box(1, 0, 1, 15, 16, 15);
     private static final VoxelShape VOXEL_SHAPE_MIDDLE_TOP = Block.box(2, 0, 2, 14, 16, 14);
 
-    public static final EnumProperty<TripleShape> SHAPE = BlockProperties.TRIPLE_SHAPE;
+    public static final EnumProperty<org.betterx.betterend.blocks.properties.TripleShape> SHAPE = BlockProperties.TRIPLE_SHAPE;
 
     public RespawnObeliskBlock() {
         super(BlockBehaviour.Properties.copy(Blocks.END_STONE).lightLevel((state) -> {
-            return (state.getValue(SHAPE) == TripleShape.BOTTOM) ? 0 : 15;
+            return (state.getValue(SHAPE) == org.betterx.betterend.blocks.properties.TripleShape.BOTTOM) ? 0 : 15;
         }));
     }
 
     @Override
     @SuppressWarnings("deprecation")
     public VoxelShape getShape(BlockState state, BlockGetter view, BlockPos pos, CollisionContext ePos) {
-        return (state.getValue(SHAPE) == TripleShape.BOTTOM) ? VOXEL_SHAPE_BOTTOM : VOXEL_SHAPE_MIDDLE_TOP;
+        return (state.getValue(SHAPE) == org.betterx.betterend.blocks.properties.TripleShape.BOTTOM) ? VOXEL_SHAPE_BOTTOM : VOXEL_SHAPE_MIDDLE_TOP;
     }
 
     @Override
@@ -91,9 +91,9 @@ public class RespawnObeliskBlock extends BaseBlock.Stone implements CustomColorP
             ItemStack itemStack
     ) {
         state = this.defaultBlockState();
-        BlocksHelper.setWithUpdate(world, pos, state.setValue(SHAPE, TripleShape.BOTTOM));
-        BlocksHelper.setWithUpdate(world, pos.above(), state.setValue(SHAPE, TripleShape.MIDDLE));
-        BlocksHelper.setWithUpdate(world, pos.above(2), state.setValue(SHAPE, TripleShape.TOP));
+        BlocksHelper.setWithUpdate(world, pos, state.setValue(SHAPE, org.betterx.betterend.blocks.properties.TripleShape.BOTTOM));
+        BlocksHelper.setWithUpdate(world, pos.above(), state.setValue(SHAPE, org.betterx.betterend.blocks.properties.TripleShape.MIDDLE));
+        BlocksHelper.setWithUpdate(world, pos.above(2), state.setValue(SHAPE, org.betterx.betterend.blocks.properties.TripleShape.TOP));
     }
 
     @Override
@@ -106,14 +106,14 @@ public class RespawnObeliskBlock extends BaseBlock.Stone implements CustomColorP
             BlockPos pos,
             BlockPos neighborPos
     ) {
-        TripleShape shape = state.getValue(SHAPE);
-        if (shape == TripleShape.BOTTOM) {
+        org.betterx.betterend.blocks.properties.TripleShape shape = state.getValue(SHAPE);
+        if (shape == org.betterx.betterend.blocks.properties.TripleShape.BOTTOM) {
             if (world.getBlockState(pos.above()).is(this)) {
                 return state;
             } else {
                 return Blocks.AIR.defaultBlockState();
             }
-        } else if (shape == TripleShape.MIDDLE) {
+        } else if (shape == org.betterx.betterend.blocks.properties.TripleShape.MIDDLE) {
             if (world.getBlockState(pos.above()).is(this) && world.getBlockState(pos.below()).is(this)) {
                 return state;
             } else {
@@ -131,10 +131,10 @@ public class RespawnObeliskBlock extends BaseBlock.Stone implements CustomColorP
     @Override
     public void playerWillDestroy(Level world, BlockPos pos, BlockState state, Player player) {
         if (player.isCreative()) {
-            TripleShape shape = state.getValue(SHAPE);
-            if (shape == TripleShape.MIDDLE) {
+            org.betterx.betterend.blocks.properties.TripleShape shape = state.getValue(SHAPE);
+            if (shape == org.betterx.betterend.blocks.properties.TripleShape.MIDDLE) {
                 BlocksHelper.setWithUpdate(world, pos.below(), Blocks.AIR);
-            } else if (shape == TripleShape.TOP) {
+            } else if (shape == org.betterx.betterend.blocks.properties.TripleShape.TOP) {
                 BlocksHelper.setWithUpdate(world, pos.below(2), Blocks.AIR);
             }
         }
@@ -143,7 +143,7 @@ public class RespawnObeliskBlock extends BaseBlock.Stone implements CustomColorP
 
     @Override
     public List<ItemStack> getDrops(BlockState state, LootParams.Builder builder) {
-        if (state.getValue(SHAPE) == TripleShape.BOTTOM) {
+        if (state.getValue(SHAPE) == org.betterx.betterend.blocks.properties.TripleShape.BOTTOM) {
             return Lists.newArrayList(new ItemStack(this));
         } else {
             return Lists.newArrayList();
@@ -199,10 +199,10 @@ public class RespawnObeliskBlock extends BaseBlock.Stone implements CustomColorP
             if (world instanceof ServerLevel) {
                 double py1 = py;
                 double py2 = py - 0.2;
-                if (state.getValue(SHAPE) == TripleShape.BOTTOM) {
+                if (state.getValue(SHAPE) == org.betterx.betterend.blocks.properties.TripleShape.BOTTOM) {
                     py1 += 1;
                     py2 += 2;
-                } else if (state.getValue(SHAPE) == TripleShape.MIDDLE) {
+                } else if (state.getValue(SHAPE) == org.betterx.betterend.blocks.properties.TripleShape.MIDDLE) {
                     py1 += 0;
                     py2 += 1;
                 } else {
