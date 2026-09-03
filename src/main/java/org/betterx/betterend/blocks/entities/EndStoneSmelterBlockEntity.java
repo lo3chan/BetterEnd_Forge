@@ -37,7 +37,7 @@ import net.minecraft.world.level.block.entity.BaseContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 
-import net.minecraftforge.common.ForgeHooks;
+import net.neoforged.common.ForgeHooks;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;

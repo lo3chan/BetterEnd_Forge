@@ -8,9 +8,9 @@ import org.betterx.bclib.sdf.operator.SDFScale3D;
 import org.betterx.bclib.sdf.operator.SDFSubtraction;
 import org.betterx.bclib.sdf.operator.SDFTranslate;
 import org.betterx.bclib.sdf.primitive.SDFSphere;
-import org.betterx.bclib.util.BlocksHelper;
-import org.betterx.bclib.util.MHelper;
-import org.betterx.bclib.util.SplineHelper;
+import org.betterx.betterend.util.BlocksHelper;
+import org.betterx.betterend.util.MHelper;
+import org.betterx.betterend.util.SplineHelper;
 import org.betterx.betterend.noise.OpenSimplexNoise;
 import org.betterx.betterend.registry.EndBlocks;
 

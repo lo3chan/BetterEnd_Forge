@@ -7,7 +7,7 @@ import org.betterx.bclib.client.render.BCLRenderLayer;
 import org.betterx.bclib.interfaces.RenderLayerProvider;
 import org.betterx.bclib.interfaces.TagProvider;
 import org.betterx.bclib.items.tool.BaseShearsItem;
-import org.betterx.bclib.util.MHelper;
+import org.betterx.betterend.util.MHelper;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

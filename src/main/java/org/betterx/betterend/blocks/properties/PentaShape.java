@@ -2,7 +2,7 @@ package org.betterx.betterend.blocks.properties;
 
 import net.minecraft.util.StringRepresentable;
 
-public enum org.betterx.betterend.blocks.properties.PentaShape implements StringRepresentable {
+public enum PentaShape implements StringRepresentable {
     BOTTOM("bottom"),
     PRE_BOTTOM("pre_bottom"),
     MIDDLE("middle"),
@@ -11,7 +11,7 @@ public enum org.betterx.betterend.blocks.properties.PentaShape implements String
 
     private final String name;
 
-    org.betterx.betterend.blocks.properties.PentaShape(String name) {
+    PentaShape(String name) {
         this.name = name;
     }
 

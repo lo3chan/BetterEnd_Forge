@@ -1,4 +1,4 @@
-package org.betterx.bclib.util;
+package org.betterx.betterend.util;
 
 import org.betterx.bclib.sdf.SDF;
 import org.betterx.bclib.sdf.operator.SDFUnion;

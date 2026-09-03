@@ -1,7 +1,7 @@
 package org.betterx.betterend.blocks;
 
 import net.minecraft.world.level.block.Block;
-import org.betterx.bclib.util.BlocksHelper;
+import org.betterx.betterend.util.BlocksHelper;
 import org.betterx.betterend.registry.EndBlocks;
 
 import net.minecraft.core.BlockPos;

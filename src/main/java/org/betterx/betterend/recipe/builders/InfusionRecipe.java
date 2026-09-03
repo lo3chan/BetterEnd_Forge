@@ -4,7 +4,7 @@ import org.betterx.bclib.BCLib;
 import org.betterx.bclib.interfaces.UnknownReceipBookCategory;
 import org.betterx.bclib.recipes.AbstractSingleInputRecipeBuilder;
 import org.betterx.bclib.recipes.BCLRecipeManager;
-import org.betterx.bclib.util.ItemUtil;
+import org.betterx.betterend.util.ItemUtil;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.rituals.InfusionRitual;
 
@@ -28,8 +28,8 @@ import net.minecraft.world.item.enchantment.EnchantmentInstance;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;

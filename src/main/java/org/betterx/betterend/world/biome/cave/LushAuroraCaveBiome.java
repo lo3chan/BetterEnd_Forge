@@ -6,7 +6,7 @@ import org.betterx.bclib.api.v2.levelgen.biomes.BCLBiomeBuilder.BiomeSupplier;
 import org.betterx.bclib.api.v2.levelgen.biomes.BCLBiomeSettings;
 import org.betterx.bclib.blocks.BlockProperties;
 import org.betterx.bclib.interfaces.SurfaceMaterialProvider;
-import org.betterx.bclib.util.WeightedList;
+import org.betterx.betterend.util.WeightedList;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndFeatures;
 import org.betterx.betterend.registry.EndParticles;

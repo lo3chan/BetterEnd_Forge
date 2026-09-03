@@ -1,8 +1,8 @@
 package org.betterx.betterend.world.features.terrain;
 
 import org.betterx.bclib.api.v2.levelgen.features.features.DefaultFeature;
-import org.betterx.bclib.util.BlocksHelper;
-import org.betterx.bclib.util.MHelper;
+import org.betterx.betterend.util.BlocksHelper;
+import org.betterx.betterend.util.MHelper;
 import org.betterx.betterend.blocks.HydrothermalVentBlock;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.worlds.together.tag.v3.CommonBlockTags;

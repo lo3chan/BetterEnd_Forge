@@ -5,7 +5,7 @@ import org.betterx.bclib.blocks.BaseSlabBlock;
 import org.betterx.bclib.blocks.BaseStairsBlock;
 import org.betterx.bclib.blocks.BaseWallBlock;
 import org.betterx.bclib.recipes.BCLRecipeBuilder;
-import org.betterx.bclib.util.RecipeHelper;
+import org.betterx.betterend.util.RecipeHelper;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.blocks.EndPedestal;
 import org.betterx.betterend.blocks.basis.LitBaseBlock;

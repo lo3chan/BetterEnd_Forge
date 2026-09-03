@@ -1,6 +1,6 @@
 package org.betterx.betterend.world.features.terrain;
 
-import org.betterx.bclib.util.MHelper;
+import org.betterx.betterend.util.MHelper;
 
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.ChunkPos;

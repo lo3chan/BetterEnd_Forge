@@ -8,7 +8,7 @@ import org.betterx.bclib.items.tool.BaseHoeItem;
 import org.betterx.bclib.items.tool.BaseShovelItem;
 import org.betterx.bclib.items.tool.BaseSwordItem;
 import org.betterx.bclib.recipes.BCLRecipeBuilder;
-import org.betterx.bclib.util.RecipeHelper;
+import org.betterx.betterend.util.RecipeHelper;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.blocks.BulbVineLanternBlock;
 import org.betterx.betterend.blocks.BulbVineLanternColoredBlock;

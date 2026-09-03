@@ -1,4 +1,4 @@
-package org.betterx.bclib.util;
+package org.betterx.betterend.util;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Vec3i;

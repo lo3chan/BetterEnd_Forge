@@ -1,7 +1,7 @@
 package org.betterx.betterend.registry;
 
-import org.betterx.bclib.util.JsonFactory;
-import org.betterx.bclib.util.MHelper;
+import org.betterx.betterend.util.JsonFactory;
+import org.betterx.betterend.util.MHelper;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.ui.ColorUtil;
 
@@ -10,7 +10,7 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.Level;
 
-import net.minecraftforge.fml.loading.FMLPaths;
+import net.neoforged.fml.loading.FMLPaths;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;

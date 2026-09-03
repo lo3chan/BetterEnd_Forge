@@ -5,7 +5,7 @@ import org.betterx.bclib.sdf.SDF;
 import org.betterx.bclib.sdf.operator.SDFDisplacement;
 import org.betterx.bclib.sdf.operator.SDFTranslate;
 import org.betterx.bclib.sdf.primitive.SDFCappedCone;
-import org.betterx.bclib.util.BlocksHelper;
+import org.betterx.betterend.util.BlocksHelper;
 import org.betterx.betterend.noise.OpenSimplexNoise;
 import org.betterx.betterend.world.biome.EndBiome;
 

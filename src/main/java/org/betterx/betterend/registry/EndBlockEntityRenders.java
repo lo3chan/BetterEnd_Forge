@@ -2,9 +2,9 @@ package org.betterx.betterend.registry;
 
 import org.betterx.betterend.client.render.PedestalItemRenderer;
 
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.client.event.EntityRenderersEvent;
 
 @OnlyIn(Dist.CLIENT)
 public class EndBlockEntityRenders {

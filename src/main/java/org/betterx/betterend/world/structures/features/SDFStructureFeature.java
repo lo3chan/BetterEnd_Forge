@@ -1,7 +1,7 @@
 package org.betterx.betterend.world.structures.features;
 
 import org.betterx.bclib.sdf.SDF;
-import org.betterx.bclib.util.MHelper;
+import org.betterx.betterend.util.MHelper;
 import org.betterx.betterend.world.structures.piece.VoxelPiece;
 
 import net.minecraft.core.BlockPos;

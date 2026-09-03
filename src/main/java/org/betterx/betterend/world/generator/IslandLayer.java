@@ -6,7 +6,7 @@ import org.betterx.bclib.sdf.operator.SDFScale;
 import org.betterx.bclib.sdf.operator.SDFSmoothUnion;
 import org.betterx.bclib.sdf.operator.SDFTranslate;
 import org.betterx.bclib.sdf.primitive.SDFCappedCone;
-import org.betterx.bclib.util.MHelper;
+import org.betterx.betterend.util.MHelper;
 import org.betterx.betterend.noise.OpenSimplexNoise;
 
 import net.minecraft.core.BlockPos;

@@ -13,7 +13,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potion;
 import net.minecraft.world.item.alchemy.Potions;
 
-import net.minecraftforge.registries.RegisterEvent;
+import net.neoforged.registries.RegisterEvent;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

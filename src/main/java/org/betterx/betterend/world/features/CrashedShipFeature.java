@@ -1,10 +1,10 @@
 package org.betterx.betterend.world.features;
 
 import org.betterx.bclib.api.v2.levelgen.features.features.DefaultFeature;
-import org.betterx.bclib.util.BlocksHelper;
-import org.betterx.bclib.util.MHelper;
-import org.betterx.bclib.util.StructureHelper;
-import org.betterx.bclib.util.StructureErode;
+import org.betterx.betterend.util.BlocksHelper;
+import org.betterx.betterend.util.MHelper;
+import org.betterx.betterend.util.StructureHelper;
+import org.betterx.betterend.util.StructureErode;
 import org.betterx.betterend.util.BlockFixer;
 import org.betterx.betterend.util.EndStructureHelper;
 import org.betterx.worlds.together.tag.v3.CommonBlockTags;

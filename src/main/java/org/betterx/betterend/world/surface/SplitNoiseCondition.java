@@ -2,7 +2,7 @@ package org.betterx.betterend.world.surface;
 
 import org.betterx.bclib.interfaces.NumericProvider;
 import org.betterx.bclib.mixin.common.SurfaceRulesContextAccessor;
-import org.betterx.bclib.util.MHelper;
+import org.betterx.betterend.util.MHelper;
 import org.betterx.betterend.noise.OpenSimplexNoise;
 
 import com.mojang.serialization.Codec;

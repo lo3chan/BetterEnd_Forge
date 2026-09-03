@@ -1,8 +1,8 @@
 package org.betterx.betterend.entity;
 
 import org.betterx.bclib.entity.DespawnableAnimal;
-import org.betterx.bclib.util.BlocksHelper;
-import org.betterx.bclib.util.MHelper;
+import org.betterx.betterend.util.BlocksHelper;
+import org.betterx.betterend.util.MHelper;
 import org.betterx.betterend.registry.EndEntities;
 import org.betterx.betterend.registry.EndSounds;
 

@@ -5,8 +5,8 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
 import org.betterx.bclib.client.render.BCLRenderLayer;
 import org.betterx.bclib.interfaces.RenderLayerProvider;
-import org.betterx.bclib.util.BlocksHelper;
-import org.betterx.bclib.util.MHelper;
+import org.betterx.betterend.util.BlocksHelper;
+import org.betterx.betterend.util.MHelper;
 import org.betterx.betterend.blocks.EndBlockProperties.CactusBottom;
 import org.betterx.betterend.interfaces.PottablePlant;
 import org.betterx.betterend.registry.EndBlocks;

@@ -1,7 +1,7 @@
 package org.betterx.bclib.sdf;
 
 import org.betterx.bclib.api.v2.levelgen.structures.StructureWorld;
-import org.betterx.bclib.util.BlocksHelper;
+import org.betterx.betterend.util.BlocksHelper;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.BlockPos.MutableBlockPos;

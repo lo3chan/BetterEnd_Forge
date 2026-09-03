@@ -2,14 +2,14 @@ package org.betterx.betterend.blocks.properties;
 
 import net.minecraft.util.StringRepresentable;
 
-public enum org.betterx.betterend.blocks.properties.TripleShape implements StringRepresentable {
+public enum TripleShape implements StringRepresentable {
     TOP("top"),
     MIDDLE("middle"),
     BOTTOM("bottom");
 
     private final String name;
 
-    org.betterx.betterend.blocks.properties.TripleShape(String name) {
+    TripleShape(String name) {
         this.name = name;
     }
 

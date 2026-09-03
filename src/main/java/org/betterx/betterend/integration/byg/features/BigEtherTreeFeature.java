@@ -2,9 +2,9 @@ package org.betterx.betterend.integration.byg.features;
 
 import org.betterx.bclib.api.v2.levelgen.features.features.DefaultFeature;
 import org.betterx.bclib.sdf.SDF;
-import org.betterx.bclib.util.BlocksHelper;
-import org.betterx.bclib.util.MHelper;
-import org.betterx.bclib.util.SplineHelper;
+import org.betterx.betterend.util.BlocksHelper;
+import org.betterx.betterend.util.MHelper;
+import org.betterx.betterend.util.SplineHelper;
 import org.betterx.betterend.integration.Integrations;
 import org.betterx.worlds.together.tag.v3.CommonBlockTags;
 

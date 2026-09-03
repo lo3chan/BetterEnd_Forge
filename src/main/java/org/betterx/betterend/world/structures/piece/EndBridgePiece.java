@@ -1,7 +1,7 @@
 package org.betterx.betterend.world.structures.piece;
 
 import org.betterx.bclib.complexmaterials.set.stone.StoneSlots;
-import org.betterx.bclib.util.BlocksHelper;
+import org.betterx.betterend.util.BlocksHelper;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndStructures;
 

@@ -2,7 +2,7 @@ package org.betterx.betterend.blocks;
 
 import net.minecraft.world.level.block.VineBlock;
 import org.betterx.bclib.interfaces.CustomColorProvider;
-import org.betterx.bclib.util.MHelper;
+import org.betterx.betterend.util.MHelper;
 import org.betterx.betterend.registry.EndParticles;
 import org.betterx.ui.ColorUtil;
 
@@ -16,8 +16,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.state.BlockState;
 
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 
 public class TenaneaFlowersBlock extends VineBlock implements CustomColorProvider {
     public static final Vec3i[] COLORS;

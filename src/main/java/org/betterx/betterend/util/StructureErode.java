@@ -1,4 +1,4 @@
-package org.betterx.bclib.util;
+package org.betterx.betterend.util;
 
 import org.betterx.bclib.api.v2.levelgen.biomes.BiomeAPI;
 import org.betterx.worlds.together.tag.v3.CommonBlockTags;

@@ -3,7 +3,7 @@ package org.betterx.betterend.world.features;
 import org.betterx.bclib.blocks.BaseVineBlock;
 import org.betterx.bclib.blocks.BlockProperties;
 import org.betterx.bclib.blocks.BlockProperties.TripleShape;
-import org.betterx.bclib.util.BlocksHelper;
+import org.betterx.betterend.util.BlocksHelper;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;

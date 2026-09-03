@@ -8,7 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 
-import net.minecraftforge.registries.RegisterEvent;
+import net.neoforged.registries.RegisterEvent;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

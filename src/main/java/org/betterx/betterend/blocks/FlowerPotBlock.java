@@ -9,8 +9,8 @@ import org.betterx.bclib.client.models.PatternsHelper;
 import org.betterx.bclib.client.render.BCLRenderLayer;
 import org.betterx.bclib.interfaces.PostInitable;
 import org.betterx.bclib.interfaces.RenderLayerProvider;
-import org.betterx.bclib.util.BlocksHelper;
-import org.betterx.bclib.util.JsonFactory;
+import org.betterx.betterend.util.BlocksHelper;
+import org.betterx.betterend.util.JsonFactory;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.blocks.basis.PottableLeavesBlock;
 import org.betterx.betterend.client.models.Patterns;
@@ -49,10 +49,10 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraftforge.fml.loading.FMLPaths;
+import net.neoforged.fml.loading.FMLPaths;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;

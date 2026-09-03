@@ -1,6 +1,6 @@
 package org.betterx.bclib.sdf.primitive;
 
-import org.betterx.bclib.util.MHelper;
+import org.betterx.betterend.util.MHelper;
 
 public class SDFTorus extends SDFPrimitive {
     private float radiusSmall;

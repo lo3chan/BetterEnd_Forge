@@ -3,7 +3,7 @@ package org.betterx.betterend.complexmaterials;
 import org.betterx.bclib.api.v3.datagen.RecipeDataProvider;
 import org.betterx.bclib.blocks.*;
 import org.betterx.bclib.recipes.BCLRecipeBuilder;
-import org.betterx.bclib.util.RecipeHelper;
+import org.betterx.betterend.util.RecipeHelper;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.blocks.EndPedestal;
 import org.betterx.betterend.blocks.FlowerPotBlock;

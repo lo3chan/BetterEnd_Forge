@@ -9,7 +9,7 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 
-import net.minecraftforge.registries.RegisterEvent;
+import net.neoforged.registries.RegisterEvent;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

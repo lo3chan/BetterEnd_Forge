@@ -2,7 +2,7 @@ package org.betterx.betterend.blocks;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import org.betterx.bclib.util.BlocksHelper;
+import org.betterx.betterend.util.BlocksHelper;
 import org.betterx.betterend.registry.EndBlocks;
 
 import net.minecraft.client.multiplayer.ClientLevel;

@@ -2,8 +2,8 @@ package org.betterx.betterend.interfaces;
 
 import org.betterx.betterend.registry.EndItems;
 
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 
 public interface MultiModelItem {
     @OnlyIn(Dist.CLIENT)

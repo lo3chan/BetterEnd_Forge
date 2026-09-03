@@ -15,7 +15,7 @@ import net.minecraft.world.entity.ai.village.poi.PoiTypes;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
-import net.minecraftforge.registries.RegisterEvent;
+import net.neoforged.registries.RegisterEvent;
 
 import java.util.HashSet;
 import java.util.Set;

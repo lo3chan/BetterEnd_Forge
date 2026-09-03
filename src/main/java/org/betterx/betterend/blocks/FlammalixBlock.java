@@ -16,8 +16,8 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 
 public class FlammalixBlock extends EndPlantBlock implements BehaviourPlant, SurvicesOnPallidium {
     private static final VoxelShape SHAPE = Block.box(2, 0, 2, 14, 14, 14);

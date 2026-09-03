@@ -14,8 +14,8 @@ import net.minecraft.world.entity.EntityType.EntityFactory;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.level.levelgen.Heightmap.Types;
 
-import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
-import net.minecraftforge.registries.RegisterEvent;
+import net.neoforged.event.entity.EntityAttributeCreationEvent;
+import net.neoforged.registries.RegisterEvent;
 
 import com.google.common.collect.Maps;
 

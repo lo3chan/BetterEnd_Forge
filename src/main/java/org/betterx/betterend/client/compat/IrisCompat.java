@@ -1,6 +1,6 @@
 package org.betterx.betterend.client.compat;
 
-import net.minecraftforge.fml.ModList;
+import net.neoforged.fml.ModList;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

@@ -5,7 +5,7 @@ import org.betterx.bclib.behaviours.interfaces.BehaviourWaterPlant;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
 import org.betterx.bclib.interfaces.tools.AddMineableShears;
-import org.betterx.bclib.util.MHelper;
+import org.betterx.betterend.util.MHelper;
 import org.betterx.betterend.blocks.basis.EndUnderwaterPlantBlock;
 import org.betterx.betterend.interfaces.survives.SurvivesOnEndStone;
 import org.betterx.betterend.registry.EndBlocks;
@@ -31,8 +31,8 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 
 import com.google.common.collect.Lists;
 

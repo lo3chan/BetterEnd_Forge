@@ -8,8 +8,8 @@ import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.Registries;
 
-import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
-import net.minecraftforge.registries.RegisterEvent;
+import net.neoforged.client.event.RegisterParticleProvidersEvent;
+import net.neoforged.registries.RegisterEvent;
 
 public class EndParticles {
     public static SimpleParticleType GLOWING_SPHERE;

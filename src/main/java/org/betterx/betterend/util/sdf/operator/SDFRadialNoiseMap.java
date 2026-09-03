@@ -1,7 +1,7 @@
 package org.betterx.bclib.sdf.operator;
 
 import org.betterx.bclib.noise.OpenSimplexNoise;
-import org.betterx.bclib.util.MHelper;
+import org.betterx.betterend.util.MHelper;
 
 import net.minecraft.util.Mth;
 

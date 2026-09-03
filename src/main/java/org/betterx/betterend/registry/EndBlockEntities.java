@@ -9,7 +9,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 
-import net.minecraftforge.registries.RegisterEvent;
+import net.neoforged.registries.RegisterEvent;
 
 public class EndBlockEntities {
     public static BlockEntityType<EndStoneSmelterBlockEntity> END_STONE_SMELTER;

@@ -5,7 +5,7 @@ import org.betterx.bclib.integration.ModIntegration;
 import org.betterx.betterend.integration.byg.BYGIntegration;
 import org.betterx.betterend.integration.elytraslot.ElytraSlotCompat;
 
-import net.minecraftforge.fml.ModList;
+import net.neoforged.fml.ModList;
 
 public class Integrations {
     public static final ModIntegration BYG = ModIntegrationAPI.register(new BYGIntegration());

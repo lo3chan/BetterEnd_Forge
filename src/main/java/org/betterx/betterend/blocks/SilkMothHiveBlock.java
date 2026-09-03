@@ -2,8 +2,8 @@ package org.betterx.betterend.blocks;
 
 import net.minecraft.world.level.block.Block;
 import org.betterx.bclib.items.tool.BaseShearsItem;
-import org.betterx.bclib.util.BlocksHelper;
-import org.betterx.bclib.util.MHelper;
+import org.betterx.betterend.util.BlocksHelper;
+import org.betterx.betterend.util.MHelper;
 import org.betterx.betterend.entity.SilkMothEntity;
 import org.betterx.betterend.registry.EndEntities;
 import org.betterx.betterend.registry.EndItems;

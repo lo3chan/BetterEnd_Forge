@@ -6,7 +6,7 @@ import net.minecraft.world.level.block.FaceAttachedHorizontalDirectionalBlock;
 import org.betterx.bclib.client.render.BCLRenderLayer;
 import org.betterx.bclib.interfaces.RenderLayerProvider;
 import org.betterx.bclib.items.tool.BaseShearsItem;
-import org.betterx.bclib.util.BlocksHelper;
+import org.betterx.betterend.util.BlocksHelper;
 import org.betterx.betterend.interfaces.PottablePlant;
 import org.betterx.betterend.registry.EndFeatures;
 import org.betterx.worlds.together.tag.v3.CommonBlockTags;

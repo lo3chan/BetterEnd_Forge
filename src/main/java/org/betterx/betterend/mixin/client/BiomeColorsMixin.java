@@ -1,6 +1,6 @@
 package org.betterx.betterend.mixin.client;
 
-import org.betterx.bclib.util.MHelper;
+import org.betterx.betterend.util.MHelper;
 import org.betterx.betterend.client.ClientOptions;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.ui.ColorUtil;

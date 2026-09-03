@@ -1,7 +1,7 @@
 package org.betterx.betterend.world.features.terrain;
 
 import org.betterx.bclib.blocks.StalactiteBlock;
-import org.betterx.bclib.util.BlocksHelper;
+import org.betterx.betterend.util.BlocksHelper;
 import org.betterx.worlds.together.tag.v3.CommonBlockTags;
 
 import net.minecraft.core.BlockPos;

@@ -8,9 +8,9 @@ import org.betterx.bclib.sdf.operator.SDFFlatWave;
 import org.betterx.bclib.sdf.operator.SDFSmoothUnion;
 import org.betterx.bclib.sdf.primitive.SDFCappedCone;
 import org.betterx.bclib.sdf.primitive.SDFSphere;
-import org.betterx.bclib.util.BlocksHelper;
-import org.betterx.bclib.util.MHelper;
-import org.betterx.bclib.util.SplineHelper;
+import org.betterx.betterend.util.BlocksHelper;
+import org.betterx.betterend.util.MHelper;
+import org.betterx.betterend.util.SplineHelper;
 import org.betterx.betterend.integration.Integrations;
 import org.betterx.worlds.together.tag.v3.CommonBlockTags;
 

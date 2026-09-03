@@ -1,6 +1,6 @@
 package org.betterx.betterend.mixin.common;
 
-import org.betterx.bclib.util.MHelper;
+import org.betterx.betterend.util.MHelper;
 import org.betterx.betterend.item.tool.EndHammerItem;
 
 import net.minecraft.util.Mth;

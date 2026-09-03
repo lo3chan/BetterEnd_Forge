@@ -10,7 +10,7 @@ import org.betterx.bclib.api.v3.levelgen.features.BCLFeature;
 import org.betterx.bclib.api.v3.levelgen.features.BCLFeatureBuilder;
 import org.betterx.bclib.api.v3.levelgen.features.config.ConditionFeatureConfig;
 import org.betterx.bclib.api.v3.levelgen.features.placement.InBiome;
-import org.betterx.bclib.util.JsonFactory;
+import org.betterx.betterend.util.JsonFactory;
 import org.betterx.betterend.BetterEnd;
 import org.betterx.betterend.complexmaterials.StoneMaterial;
 import org.betterx.betterend.config.Configs;

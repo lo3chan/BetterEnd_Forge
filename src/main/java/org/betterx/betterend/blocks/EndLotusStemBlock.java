@@ -6,7 +6,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
 import org.betterx.bclib.client.render.BCLRenderLayer;
 import org.betterx.bclib.interfaces.RenderLayerProvider;
-import org.betterx.bclib.util.BlocksHelper;
+import org.betterx.betterend.util.BlocksHelper;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

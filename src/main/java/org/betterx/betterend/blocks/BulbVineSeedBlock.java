@@ -4,7 +4,7 @@ import org.betterx.bclib.behaviours.BehaviourBuilders;
 import org.betterx.bclib.behaviours.interfaces.BehaviourSeed;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
-import org.betterx.bclib.util.BlocksHelper;
+import org.betterx.betterend.util.BlocksHelper;
 import org.betterx.betterend.blocks.basis.EndPlantWithAgeBlock;
 import org.betterx.betterend.interfaces.survives.SurvivesOnEndStoneOrTrees;
 import org.betterx.betterend.registry.EndBlocks;

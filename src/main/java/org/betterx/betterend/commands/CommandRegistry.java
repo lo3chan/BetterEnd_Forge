@@ -1,11 +1,11 @@
 package org.betterx.betterend.commands;
 
-import org.betterx.bclib.api.v2.levelgen.biomes.BCLBiome;
-import org.betterx.bclib.api.v2.poi.BCLPoiType;
-import org.betterx.bclib.util.BlocksHelper;
+import org.betterx.betterend.registry.EndBiomes.BCLBiome;
+import net.minecraft.world.entity.ai.village.poi.PoiType;
+import org.betterx.betterend.util.BlocksHelper;
 import org.betterx.betterend.registry.EndPoiTypes;
 import org.betterx.betterend.world.biome.EndBiome;
-import org.betterx.worlds.together.world.event.WorldBootstrap;
+import net.neoforged.neoforge.server.ServerLifecycleHooks;
 
 import com.mojang.brigadier.Command;
 import com.mojang.brigadier.CommandDispatcher;
@@ -36,8 +36,8 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegisterCommandsEvent;
+import net.neoforged.common.MinecraftForge;
+import net.neoforged.event.RegisterCommandsEvent;
 
 import com.google.common.base.Stopwatch;
 import org.joml.Vector3d;
@@ -186,9 +186,9 @@ public class CommandRegistry {
                 }
             };
             ResourceKey<Biome> a = biome.getBiomeKey();
-            if (WorldBootstrap.getLastRegistryAccess() != null) {
+            if (ServerLifecycleHooks.getCurrentServer().registryAccess() != null) {
                 Stopwatch stopwatch = Stopwatch.createStarted(Util.TICKER);
-                Holder<Biome> h = WorldBootstrap.getLastRegistryAccess()
+                Holder<Biome> h = ServerLifecycleHooks.getCurrentServer().registryAccess()
                                                 .registryOrThrow(Registries.BIOME)
                                                 .getHolder(a)
                                                 .orElseThrow();

@@ -24,8 +24,8 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCon
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.LootTableLoadEvent;
+import net.neoforged.common.MinecraftForge;
+import net.neoforged.event.LootTableLoadEvent;
 
 public class LootTableUtil {
     public static final ResourceLocation VILLAGE_LOOT = BetterEnd.makeID("chests/end_village_loot");

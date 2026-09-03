@@ -25,12 +25,12 @@ import net.minecraft.data.DataProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 
-import net.minecraftforge.common.data.DatapackBuiltinEntriesProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.common.data.ForgeAdvancementProvider;
-import net.minecraftforge.data.event.GatherDataEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.common.data.DatapackBuiltinEntriesProvider;
+import net.neoforged.common.data.ExistingFileHelper;
+import net.neoforged.common.data.ForgeAdvancementProvider;
+import net.neoforged.data.event.GatherDataEvent;
+import net.neoforged.eventbus.api.SubscribeEvent;
+import net.neoforged.fml.common.Mod;
 
 import java.util.List;
 import java.util.Set;

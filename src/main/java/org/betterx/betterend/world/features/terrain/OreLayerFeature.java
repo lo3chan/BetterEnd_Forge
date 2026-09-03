@@ -4,7 +4,7 @@ import org.betterx.bclib.sdf.SDF;
 import org.betterx.bclib.sdf.operator.SDFCoordModify;
 import org.betterx.bclib.sdf.operator.SDFScale3D;
 import org.betterx.bclib.sdf.primitive.SDFSphere;
-import org.betterx.bclib.util.MHelper;
+import org.betterx.betterend.util.MHelper;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;

@@ -1,7 +1,7 @@
 package org.betterx.betterend.client.render;
 
-import org.betterx.bclib.util.BackgroundInfo;
-import org.betterx.bclib.util.MHelper;
+import org.betterx.betterend.util.BackgroundInfo;
+import org.betterx.betterend.util.MHelper;
 import org.betterx.betterend.BetterEnd;
 
 import com.mojang.blaze3d.platform.GlStateManager;

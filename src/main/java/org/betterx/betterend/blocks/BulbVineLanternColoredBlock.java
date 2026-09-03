@@ -1,7 +1,7 @@
 package org.betterx.betterend.blocks;
 
 import org.betterx.bclib.interfaces.CustomColorProvider;
-import org.betterx.bclib.util.BlocksHelper;
+import org.betterx.betterend.util.BlocksHelper;
 import org.betterx.ui.ColorUtil;
 
 import net.minecraft.client.color.block.BlockColor;

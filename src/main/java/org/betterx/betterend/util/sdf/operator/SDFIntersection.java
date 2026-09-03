@@ -1,6 +1,6 @@
 package org.betterx.bclib.sdf.operator;
 
-import org.betterx.bclib.util.MHelper;
+import org.betterx.betterend.util.MHelper;
 
 public class SDFIntersection extends SDFBinary {
     @Override

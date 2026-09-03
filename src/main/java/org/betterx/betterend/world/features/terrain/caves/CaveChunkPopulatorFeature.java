@@ -1,7 +1,7 @@
 package org.betterx.betterend.world.features.terrain.caves;
 
 import org.betterx.bclib.api.v2.levelgen.biomes.BCLBiomeRegistry;
-import org.betterx.bclib.util.BlocksHelper;
+import org.betterx.betterend.util.BlocksHelper;
 import org.betterx.betterend.util.BlockFixer;
 import org.betterx.betterend.world.biome.cave.EndCaveBiome;
 import org.betterx.worlds.together.tag.v3.CommonBlockTags;

@@ -1,8 +1,8 @@
 package org.betterx.betterend.world.features;
 
 import org.betterx.bclib.blocks.BaseDoublePlantBlock;
-import org.betterx.bclib.util.BlocksHelper;
-import org.betterx.bclib.util.MHelper;
+import org.betterx.betterend.util.BlocksHelper;
+import org.betterx.betterend.util.MHelper;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;

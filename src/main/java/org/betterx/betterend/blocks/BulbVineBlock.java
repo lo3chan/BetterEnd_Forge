@@ -2,7 +2,7 @@ package org.betterx.betterend.blocks;
 
 import net.minecraft.world.level.block.VineBlock;
 
-import org.betterx.bclib.util.MHelper;
+import org.betterx.betterend.util.MHelper;
 import org.betterx.betterend.registry.EndBlocks;
 import org.betterx.betterend.registry.EndItems;
 
