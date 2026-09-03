@@ -1,3 +1,5 @@
+#!/bin/bash
+cat << 'INNER_EOF' > src/main/java/org/betterx/betterend/util/BlocksHelper.java
 package org.betterx.betterend.util;
 
 import net.minecraft.core.BlockPos;
@@ -134,3 +136,4 @@ public class BlocksHelper {
         return isInvulnerable(state, level, pos);
     }
 }
+INNER_EOF
