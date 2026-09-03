@@ -1,7 +1,7 @@
 package org.betterx.betterend.blocks;
 
 import org.betterx.bclib.behaviours.BehaviourBuilders;
-import org.betterx.bclib.blocks.BaseBlock;
+import net.minecraft.world.level.block.Block;
 import org.betterx.bclib.interfaces.tools.AddMineableShears;
 import org.betterx.betterend.registry.EndBlocks;
 
@@ -17,7 +17,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.material.MapColor;
 
-public class GlowingPillarLuminophorBlock extends BaseBlock implements AddMineableShears {
+public class GlowingPillarLuminophorBlock extends Block implements AddMineableShears {
     public static final BooleanProperty NATURAL = EndBlockProperties.NATURAL;
 
     public GlowingPillarLuminophorBlock() {

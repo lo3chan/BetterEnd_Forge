@@ -1,7 +1,7 @@
 package org.betterx.betterend.blocks;
 
 import org.betterx.bclib.behaviours.interfaces.BehaviourIce;
-import org.betterx.bclib.blocks.BaseBlock;
+import net.minecraft.world.level.block.Block;
 import org.betterx.bclib.util.BlocksHelper;
 import org.betterx.bclib.util.MHelper;
 import org.betterx.betterend.registry.EndBlocks;
@@ -26,7 +26,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import java.util.Collections;
 import java.util.List;
 
-public class AncientEmeraldIceBlock extends BaseBlock implements BehaviourIce {
+public class AncientEmeraldIceBlock extends Block implements BehaviourIce {
     public AncientEmeraldIceBlock() {
         super(BlockBehaviour.Properties.copy(Blocks.BLUE_ICE).randomTicks());
     }
