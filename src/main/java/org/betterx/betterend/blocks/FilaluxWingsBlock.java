@@ -2,7 +2,7 @@ package org.betterx.betterend.blocks;
 
 import org.betterx.bclib.behaviours.BehaviourBuilders;
 import org.betterx.bclib.behaviours.interfaces.BehaviourPlant;
-import org.betterx.bclib.blocks.BaseAttachedBlock;
+import net.minecraft.world.level.block.FaceAttachedHorizontalDirectionalBlock;
 import org.betterx.bclib.client.render.BCLRenderLayer;
 import org.betterx.bclib.interfaces.RenderLayerProvider;
 
@@ -20,7 +20,7 @@ import com.google.common.collect.Maps;
 
 import java.util.EnumMap;
 
-public class FilaluxWingsBlock extends BaseAttachedBlock implements RenderLayerProvider, BehaviourPlant {
+public class FilaluxWingsBlock extends FaceAttachedHorizontalDirectionalBlock implements RenderLayerProvider, BehaviourPlant {
     private static final EnumMap<Direction, VoxelShape> BOUNDING_SHAPES = Maps.newEnumMap(Direction.class);
 
     public FilaluxWingsBlock() {

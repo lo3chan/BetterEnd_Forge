@@ -12,25 +12,501 @@ For more details see https://docs.gradle.org/8.8/release-notes.html
 
 Starting a Gradle Daemon (subsequent builds will be faster)
 
+> Task :createMinecraftArtifacts
+Loaded 111 artifacts from /app/build/tmp/createMinecraftArtifacts/nfrt_artifact_manifest.properties
+[1m*** Started working on [4mdownloadJson[0m[0m
+  ↓ https://launchermeta.mojang.com/mc/game/version_manifest_v2.json
+  ↓ https://piston-meta.mojang.com/v1/packages/f291c8193228de9a1eef964aa05586bd920967e4/1.21.1.json
+ [1m[92m✓[0m Completed [4mdownloadJson[0m in 0.88s
+[1m*** Started working on [4mdownloadServer[0m[0m
+[1m*** Started working on [4mdownloadClientMappings[0m[0m
+[1m*** Started working on [4mdownloadClient[0m[0m
+[1m*** Started working on [4mlistLibraries[0m[0m
+  ↓ https://piston-data.mojang.com/v1/objects/2244b6f072256667bcd9a73df124d6c58de77992/client.txt
+  ↓ https://piston-data.mojang.com/v1/objects/30c73b1c5da787909b2f73340419fdf13b9def88/client.jar
+  ↓ https://piston-data.mojang.com/v1/objects/59353fb40c36d304f2035d51e7d6e6baa98dc05c/server.jar
+ [1m[92m✓[0m Completed [4mlistLibraries[0m in 0.06s
+ [1m[92m✓[0m Completed [4mdownloadClientMappings[0m in 0.98s
+[1m*** Started working on [4mmergeMappings[0m[0m
+ ↳ Running external tool net.neoforged.installertools:installertools:2.1.2:fatjar
+ [1m[92m✓[0m Completed [4mdownloadClient[0m in 2.03s
+[1m*** Started working on [4mstripClient[0m[0m
+ [1m[92m✓[0m Completed [4mdownloadServer[0m in 3.12s
+[1m*** Started working on [4mextractServer[0m[0m
+ ↳ Running external tool net.neoforged.installertools:installertools:2.1.2:fatjar
+ [1m[92m✓[0m Completed [4mextractServer[0m in 1.58s
+[1m*** Started working on [4mstripServer[0m[0m
+ [1m[92m✓[0m Completed [4mstripClient[0m in 5.50s
+ [1m[92m✓[0m Completed [4mstripServer[0m in 3.09s
+[1m*** Started working on [4mmerge[0m[0m
+ ↳ Running external tool net.neoforged:mergetool:2.0.3:fatjar
+ [1m[92m✓[0m Completed [4mmergeMappings[0m in 9.46s
+ [1m[92m✓[0m Completed [4mmerge[0m in 5.78s
+[1m*** Started working on [4mrename[0m[0m
+ ↳ Running external tool net.neoforged:AutoRenamingTool:2.0.3:all
+ [1m[92m✓[0m Completed [4mrename[0m in 9.80s
+[1m*** Started working on [4mdecompile[0m[0m
+ ↳ Running external tool org.vineflower:vineflower:1.10.1
+ [1m[92m✓[0m Completed [4mdecompile[0m in 88.50s
+[1m*** Started working on [4minject[0m[0m
+ [1m[92m✓[0m Completed [4minject[0m in 5.99s
+[1m*** Started working on [4mpatch[0m[0m
+ ↳ Running external tool io.codechicken:DiffPatch:2.0.0.36:all
+ [1m[92m✓[0m Completed [4mpatch[0m in 4.08s
+[1m*** Started working on [4mapplyNeoforgePatches[0m[0m
+ ↳ Running external tool io.codechicken:DiffPatch:2.0.0.36:all
+ [1m[92m✓[0m Completed [4mapplyNeoforgePatches[0m in 2.95s
+[1m*** Started working on [4mtransformSources[0m[0m
+ ↳ Running external tool net.neoforged.jst:jst-cli-bundle:1.0.66
+ [1m[92m✓[0m Completed [4mtransformSources[0m in 10.54s
+[1m*** Started working on [4mrecompile[0m[0m
+ 109 items on the compile classpath
+ 0 items on the sourcepath
+[1m*** Started working on [4msourcesWithNeoForge[0m[0m
+ Compiling 5364 source files
+ [1m[92m✓[0m Completed [4msourcesWithNeoForge[0m in 4.71s
+Copied 0 resource files
+ [1m[92m✓[0m Completed [4mrecompile[0m in 52.03s
+[1m*** Started working on [4mcompiledWithNeoForge[0m[0m
+ [1m[92m✓[0m Completed [4mcompiledWithNeoForge[0m in 8.18s
+[1m*** Started working on [4msourcesAndCompiledWithNeoForge[0m[0m
+ [1m[92m✓[0m Completed [4msourcesAndCompiledWithNeoForge[0m in 3.89s
+Total runtime: 203.61s
+
+
+> Task :compileJava
+/app/src/main/java/org/betterx/betterend/commands/CommandRegistry.java:3: error: package org.betterx.bclib.api.v2.levelgen.biomes does not exist
+import org.betterx.bclib.api.v2.levelgen.biomes.BCLBiome;
+                                               ^
+/app/src/main/java/org/betterx/betterend/commands/CommandRegistry.java:4: error: package org.betterx.bclib.api.v2.poi does not exist
+import org.betterx.bclib.api.v2.poi.BCLPoiType;
+                                   ^
+/app/src/main/java/org/betterx/betterend/commands/CommandRegistry.java:5: error: cannot find symbol
+import org.betterx.bclib.util.BlocksHelper;
+                             ^
+  symbol:   class BlocksHelper
+  location: package org.betterx.bclib.util
+/app/src/main/java/org/betterx/betterend/commands/CommandRegistry.java:8: error: package org.betterx.worlds.together.world.event does not exist
+import org.betterx.worlds.together.world.event.WorldBootstrap;
+                                              ^
+/app/src/main/java/org/betterx/betterend/commands/CommandRegistry.java:39: error: package net.minecraftforge.common does not exist
+import net.minecraftforge.common.MinecraftForge;
+                                ^
+/app/src/main/java/org/betterx/betterend/commands/CommandRegistry.java:40: error: package net.minecraftforge.event does not exist
+import net.minecraftforge.event.RegisterCommandsEvent;
+                               ^
+/app/src/main/java/org/betterx/betterend/commands/CommandRegistry.java:54: error: cannot find symbol
+    private static void onRegisterCommands(RegisterCommandsEvent event) {
+                                           ^
+  symbol:   class RegisterCommandsEvent
+  location: class CommandRegistry
+/app/src/main/java/org/betterx/betterend/commands/CommandRegistry.java:82: error: cannot find symbol
+    private static int find_poi(CommandContext<CommandSourceStack> ctx, BCLPoiType poi) throws CommandSyntaxException {
+                                                                        ^
+  symbol:   class BCLPoiType
+  location: class CommandRegistry
+/app/src/main/java/org/betterx/betterend/portal/PortalBuilder.java:3: error: cannot find symbol
+import org.betterx.bclib.util.BlocksHelper;
+                             ^
+  symbol:   class BlocksHelper
+  location: package org.betterx.bclib.util
+/app/src/main/java/org/betterx/betterend/portal/TravelerState.java:25: error: cannot find symbol
+import net.minecraft.world.level.portal.PortalInfo;
+                                       ^
+  symbol:   class PortalInfo
+  location: package net.minecraft.world.level.portal
+/app/src/main/java/org/betterx/betterend/portal/TravelerState.java:133: error: cannot find symbol
+    private void teleportEntity(ServerLevel serverLevel, PortalInfo portalInfo) {
+                                                         ^
+  symbol:   class PortalInfo
+  location: class TravelerState
+/app/src/main/java/org/betterx/betterend/portal/TravelerState.java:155: error: cannot find symbol
+    public static Entity sendToDimension(Entity traveler, ServerLevel serverLevel, @NotNull PortalInfo portalInfo) {
+                                                                                            ^
+  symbol:   class PortalInfo
+  location: class TravelerState
+/app/src/main/java/org/betterx/betterend/portal/TravelerState.java:183: error: cannot find symbol
+            @NotNull PortalInfo portalInfo
+                     ^
+  symbol:   class PortalInfo
+  location: class TravelerState
+/app/src/main/java/org/betterx/betterend/portal/TravelerState.java:257: error: cannot find symbol
+    private PortalInfo findDimensionEntryPoint(ServerLevel targetLevel) {
+            ^
+  symbol:   class PortalInfo
+  location: class TravelerState
+/app/src/main/java/org/betterx/betterend/world/structures/piece/EndBridgePiece.java:3: error: package org.betterx.bclib.complexmaterials.set.stone does not exist
+import org.betterx.bclib.complexmaterials.set.stone.StoneSlots;
+                                                   ^
+/app/src/main/java/org/betterx/betterend/world/structures/piece/EndBridgePiece.java:4: error: cannot find symbol
+import org.betterx.bclib.util.BlocksHelper;
+                             ^
+  symbol:   class BlocksHelper
+  location: package org.betterx.bclib.util
+/app/src/main/java/org/betterx/betterend/world/structures/piece/MountainPiece.java:3: error: package org.betterx.bclib.api.v2.levelgen.biomes does not exist
+import org.betterx.bclib.api.v2.levelgen.biomes.BiomeAPI;
+                                               ^
+/app/src/main/java/org/betterx/betterend/world/structures/piece/MountainPiece.java:4: error: cannot find symbol
+import org.betterx.bclib.util.MHelper;
+                             ^
+  symbol:   class MHelper
+  location: package org.betterx.bclib.util
+/app/src/main/java/org/betterx/betterend/world/structures/piece/LakePiece.java:3: error: package org.betterx.bclib.api.v2.levelgen.biomes does not exist
+import org.betterx.bclib.api.v2.levelgen.biomes.BiomeAPI;
+                                               ^
+/app/src/main/java/org/betterx/betterend/world/structures/piece/LakePiece.java:4: error: cannot find symbol
+import org.betterx.bclib.util.BlocksHelper;
+                             ^
+  symbol:   class BlocksHelper
+  location: package org.betterx.bclib.util
+/app/src/main/java/org/betterx/betterend/world/structures/piece/LakePiece.java:5: error: cannot find symbol
+import org.betterx.bclib.util.MHelper;
+                             ^
+  symbol:   class MHelper
+  location: package org.betterx.bclib.util
+/app/src/main/java/org/betterx/betterend/world/structures/piece/LakePiece.java:10: error: package org.betterx.worlds.together.tag.v3 does not exist
+import org.betterx.worlds.together.tag.v3.CommonBlockTags;
+                                         ^
+/app/src/main/java/org/betterx/betterend/world/structures/piece/CrystalMountainPiece.java:3: error: cannot find symbol
+import org.betterx.bclib.util.MHelper;
+                             ^
+  symbol:   class MHelper
+  location: package org.betterx.bclib.util
+/app/src/main/java/org/betterx/betterend/world/structures/piece/CrystalMountainPiece.java:8: error: package org.betterx.worlds.together.tag.v3 does not exist
+import org.betterx.worlds.together.tag.v3.CommonBlockTags;
+                                         ^
+/app/src/main/java/org/betterx/betterend/world/structures/piece/NBTPiece.java:3: error: cannot find symbol
+import org.betterx.bclib.util.MHelper;
+                             ^
+  symbol:   class MHelper
+  location: package org.betterx.bclib.util
+/app/src/main/java/org/betterx/betterend/world/structures/piece/VoxelPiece.java:3: error: package org.betterx.bclib.api.v2.levelgen.structures does not exist
+import org.betterx.bclib.api.v2.levelgen.structures.StructureWorld;
+                                                   ^
+/app/src/main/java/org/betterx/betterend/world/structures/piece/VoxelPiece.java:19: error: cannot find symbol
+    private StructureWorld world;
+            ^
+  symbol:   class StructureWorld
+  location: class VoxelPiece
+/app/src/main/java/org/betterx/betterend/world/structures/piece/VoxelPiece.java:21: error: cannot find symbol
+    public VoxelPiece(Consumer<StructureWorld> function, int id) {
+                               ^
+  symbol:   class StructureWorld
+  location: class VoxelPiece
+/app/src/main/java/org/betterx/betterend/world/structures/piece/PaintedMountainPiece.java:3: error: cannot find symbol
+import org.betterx.bclib.util.MHelper;
+                             ^
+  symbol:   class MHelper
+  location: package org.betterx.bclib.util
+/app/src/main/java/org/betterx/betterend/world/structures/piece/CavePiece.java:3: error: cannot find symbol
+import org.betterx.bclib.util.BlocksHelper;
+                             ^
+  symbol:   class BlocksHelper
+  location: package org.betterx.bclib.util
+/app/src/main/java/org/betterx/betterend/world/structures/piece/CavePiece.java:4: error: cannot find symbol
+import org.betterx.bclib.util.MHelper;
+                             ^
+  symbol:   class MHelper
+  location: package org.betterx.bclib.util
+/app/src/main/java/org/betterx/betterend/world/structures/piece/CavePiece.java:8: error: package org.betterx.worlds.together.tag.v3 does not exist
+import org.betterx.worlds.together.tag.v3.CommonBlockTags;
+                                         ^
+/app/src/main/java/org/betterx/betterend/world/structures/features/EndBridgeStructure.java:3: error: package org.betterx.worlds.together.tag.v3 does not exist
+import org.betterx.worlds.together.tag.v3.CommonBiomeTags;
+                                         ^
+/app/src/main/java/org/betterx/betterend/world/features/terrain/SmallEndIslandLayout.java:3: error: cannot find symbol
+import org.betterx.bclib.util.MHelper;
+                             ^
+  symbol:   class MHelper
+  location: package org.betterx.bclib.util
+/app/src/main/java/org/betterx/betterend/world/structures/features/MegaLakeSmallStructure.java:3: error: cannot find symbol
+import org.betterx.bclib.util.MHelper;
+                             ^
+  symbol:   class MHelper
+  location: package org.betterx.bclib.util
+/app/src/main/java/org/betterx/betterend/world/structures/features/GiantIceStarStructure.java:8: error: cannot find symbol
+import org.betterx.bclib.util.MHelper;
+                             ^
+  symbol:   class MHelper
+  location: package org.betterx.bclib.util
+/app/src/main/java/org/betterx/betterend/world/structures/features/SDFStructureFeature.java:4: error: cannot find symbol
+import org.betterx.bclib.util.MHelper;
+                             ^
+  symbol:   class MHelper
+  location: package org.betterx.bclib.util
+/app/src/main/java/org/betterx/betterend/util/sdf/SDF.java:3: error: package org.betterx.bclib.api.v2.levelgen.structures does not exist
+import org.betterx.bclib.api.v2.levelgen.structures.StructureWorld;
+                                                   ^
+/app/src/main/java/org/betterx/betterend/util/sdf/SDF.java:4: error: cannot find symbol
+import org.betterx.bclib.util.BlocksHelper;
+                             ^
+  symbol:   class BlocksHelper
+  location: package org.betterx.bclib.util
+/app/src/main/java/org/betterx/betterend/util/sdf/SDF.java:215: error: cannot find symbol
+    public void fillRecursive(StructureWorld world, BlockPos start) {
+                              ^
+  symbol:   class StructureWorld
+  location: class SDF
+/app/src/main/java/org/betterx/betterend/world/structures/features/EternalPortalStructure.java:3: error: package org.betterx.bclib.api.v2.levelgen.structures does not exist
+import org.betterx.bclib.api.v2.levelgen.structures.BCLStructure;
+                                                   ^
+/app/src/main/java/org/betterx/betterend/world/structures/features/EternalPortalStructure.java:4: error: package org.betterx.bclib.api.v2.levelgen.structures does not exist
+import org.betterx.bclib.api.v2.levelgen.structures.StructurePlacementType;
+                                                   ^
+/app/src/main/java/org/betterx/betterend/world/structures/features/EternalPortalStructure.java:5: error: package org.betterx.bclib.api.v2.levelgen.structures does not exist
+import org.betterx.bclib.api.v2.levelgen.structures.TemplateStructure;
+                                                   ^
+/app/src/main/java/org/betterx/betterend/world/structures/features/EternalPortalStructure.java:26: error: cannot find symbol
+public class EternalPortalStructure extends TemplateStructure {
+                                            ^
+  symbol: class TemplateStructure
+/app/src/main/java/org/betterx/betterend/world/structures/features/EternalPortalStructure.java:30: error: cannot find symbol
+    public EternalPortalStructure(StructureSettings s) {
+                                  ^
+  symbol:   class StructureSettings
+  location: class EternalPortalStructure
+/app/src/main/java/org/betterx/betterend/world/structures/features/EternalPortalStructure.java:38: error: cannot find symbol
+    public Optional<GenerationStub> findGenerationPoint(GenerationContext context) {
+                                                        ^
+  symbol:   class GenerationContext
+  location: class EternalPortalStructure
+/app/src/main/java/org/betterx/betterend/world/structures/features/EternalPortalStructure.java:38: error: cannot find symbol
+    public Optional<GenerationStub> findGenerationPoint(GenerationContext context) {
+                    ^
+  symbol:   class GenerationStub
+  location: class EternalPortalStructure
+/app/src/main/java/org/betterx/betterend/world/structures/features/EternalPortalStructure.java:77: error: cannot find symbol
+    protected void generatePieces(StructurePiecesBuilder structurePiecesBuilder, GenerationContext context) {
+                                                                                 ^
+  symbol:   class GenerationContext
+  location: class EternalPortalStructure
+/app/src/main/java/org/betterx/betterend/world/structures/features/EternalPortalStructure.java:95: error: cannot find symbol
+    public static TemplateStructure.Config cfg(String name, int offsetY, StructurePlacementType type, float chance) {
+                                                                         ^
+  symbol:   class StructurePlacementType
+  location: class EternalPortalStructure
+/app/src/main/java/org/betterx/betterend/world/structures/features/EternalPortalStructure.java:95: error: package TemplateStructure does not exist
+    public static TemplateStructure.Config cfg(String name, int offsetY, StructurePlacementType type, float chance) {
+                                   ^
+/app/src/main/java/org/betterx/betterend/world/structures/features/MountainStructure.java:3: error: cannot find symbol
+import org.betterx.bclib.util.MHelper;
+                             ^
+  symbol:   class MHelper
+  location: package org.betterx.bclib.util
+/app/src/main/java/org/betterx/betterend/world/structures/features/GiantMossyGlowshroomStructure.java:8: error: cannot find symbol
+import org.betterx.bclib.util.BlocksHelper;
+                             ^
+  symbol:   class BlocksHelper
+  location: package org.betterx.bclib.util
+/app/src/main/java/org/betterx/betterend/world/structures/features/GiantMossyGlowshroomStructure.java:9: error: cannot find symbol
+import org.betterx.bclib.util.MHelper;
+                             ^
+  symbol:   class MHelper
+  location: package org.betterx.bclib.util
+/app/src/main/java/org/betterx/betterend/world/structures/features/PaintedMountainStructure.java:3: error: cannot find symbol
+import org.betterx.bclib.util.MHelper;
+                             ^
+  symbol:   class MHelper
+  location: package org.betterx.bclib.util
+/app/src/main/java/org/betterx/betterend/world/structures/features/MegaLakeStructure.java:3: error: cannot find symbol
+import org.betterx.bclib.util.MHelper;
+                             ^
+  symbol:   class MHelper
+  location: package org.betterx.bclib.util
+/app/src/main/java/org/betterx/betterend/world/structures/village/VillagePools.java:3: error: package org.betterx.bclib.api.v2.levelgen.structures does not exist
+import org.betterx.bclib.api.v2.levelgen.structures.SingleEndPoolElement;
+                                                   ^
+/app/src/main/java/org/betterx/betterend/world/structures/village/VillagePools.java:4: error: package org.betterx.bclib.api.v2.levelgen.structures does not exist
+import org.betterx.bclib.api.v2.levelgen.structures.StructurePools;
+                                                   ^
+/app/src/main/java/org/betterx/betterend/world/structures/village/VillagePools.java:12: error: cannot find symbol
+import net.minecraft.data.worldgen.BootstapContext;
+                                  ^
+  symbol:   class BootstapContext
+  location: package net.minecraft.data.worldgen
+/app/src/main/java/org/betterx/betterend/world/structures/village/VillagePools.java:52: error: cannot find symbol
+    public static void bootstrap(BootstapContext<StructureTemplatePool> ctx) {
+                                 ^
+  symbol:   class BootstapContext
+  location: class VillagePools
+/app/src/main/java/org/betterx/betterend/world/surface/SulphuricSurfaceNoiseCondition.java:3: error: package org.betterx.bclib.interfaces does not exist
+import org.betterx.bclib.interfaces.NumericProvider;
+                                   ^
+/app/src/main/java/org/betterx/betterend/world/surface/SulphuricSurfaceNoiseCondition.java:4: error: package org.betterx.bclib.mixin.common does not exist
+import org.betterx.bclib.mixin.common.SurfaceRulesContextAccessor;
+                                     ^
+/app/src/main/java/org/betterx/betterend/world/surface/SulphuricSurfaceNoiseCondition.java:5: error: cannot find symbol
+import org.betterx.bclib.util.MHelper;
+                             ^
+  symbol:   class MHelper
+  location: package org.betterx.bclib.util
+/app/src/main/java/org/betterx/betterend/world/surface/SulphuricSurfaceNoiseCondition.java:13: error: cannot find symbol
+public class SulphuricSurfaceNoiseCondition implements NumericProvider {
+                                                       ^
+  symbol: class NumericProvider
+/app/src/main/java/org/betterx/betterend/world/surface/SulphuricSurfaceNoiseCondition.java:22: error: cannot find symbol
+    public int getNumber(SurfaceRulesContextAccessor context) {
+                         ^
+  symbol:   class SurfaceRulesContextAccessor
+  location: class SulphuricSurfaceNoiseCondition
+/app/src/main/java/org/betterx/betterend/world/surface/SulphuricSurfaceNoiseCondition.java:40: error: cannot find symbol
+    public Codec<? extends NumericProvider> pcodec() {
+                           ^
+  symbol:   class NumericProvider
+  location: class SulphuricSurfaceNoiseCondition
+/app/src/main/java/org/betterx/betterend/world/surface/SplitNoiseCondition.java:3: error: package org.betterx.bclib.interfaces does not exist
+import org.betterx.bclib.interfaces.NumericProvider;
+                                   ^
+/app/src/main/java/org/betterx/betterend/world/surface/SplitNoiseCondition.java:4: error: package org.betterx.bclib.mixin.common does not exist
+import org.betterx.bclib.mixin.common.SurfaceRulesContextAccessor;
+                                     ^
+/app/src/main/java/org/betterx/betterend/world/surface/SplitNoiseCondition.java:5: error: cannot find symbol
+import org.betterx.bclib.util.MHelper;
+                             ^
+  symbol:   class MHelper
+  location: package org.betterx.bclib.util
+/app/src/main/java/org/betterx/betterend/world/surface/SplitNoiseCondition.java:13: error: cannot find symbol
+public class SplitNoiseCondition implements NumericProvider {
+                                            ^
+  symbol: class NumericProvider
+/app/src/main/java/org/betterx/betterend/world/surface/SplitNoiseCondition.java:22: error: cannot find symbol
+    public int getNumber(SurfaceRulesContextAccessor context) {
+                         ^
+  symbol:   class SurfaceRulesContextAccessor
+  location: class SplitNoiseCondition
+/app/src/main/java/org/betterx/betterend/world/surface/SplitNoiseCondition.java:40: error: cannot find symbol
+    public Codec<? extends NumericProvider> pcodec() {
+                           ^
+  symbol:   class NumericProvider
+  location: class SplitNoiseCondition
+/app/src/main/java/org/betterx/betterend/world/surface/UmbraSurfaceNoiseCondition.java:3: error: package org.betterx.bclib.interfaces does not exist
+import org.betterx.bclib.interfaces.NumericProvider;
+                                   ^
+/app/src/main/java/org/betterx/betterend/world/surface/UmbraSurfaceNoiseCondition.java:4: error: package org.betterx.bclib.mixin.common does not exist
+import org.betterx.bclib.mixin.common.SurfaceRulesContextAccessor;
+                                     ^
+/app/src/main/java/org/betterx/betterend/world/surface/UmbraSurfaceNoiseCondition.java:5: error: cannot find symbol
+import org.betterx.bclib.util.MHelper;
+                             ^
+  symbol:   class MHelper
+  location: package org.betterx.bclib.util
+/app/src/main/java/org/betterx/betterend/world/surface/UmbraSurfaceNoiseCondition.java:13: error: cannot find symbol
+public class UmbraSurfaceNoiseCondition implements NumericProvider {
+                                                   ^
+  symbol: class NumericProvider
+/app/src/main/java/org/betterx/betterend/world/surface/UmbraSurfaceNoiseCondition.java:22: error: cannot find symbol
+    public int getNumber(SurfaceRulesContextAccessor context) {
+                         ^
+  symbol:   class SurfaceRulesContextAccessor
+  location: class UmbraSurfaceNoiseCondition
+/app/src/main/java/org/betterx/betterend/world/surface/UmbraSurfaceNoiseCondition.java:45: error: cannot find symbol
+    public Codec<? extends NumericProvider> pcodec() {
+                           ^
+  symbol:   class NumericProvider
+  location: class UmbraSurfaceNoiseCondition
+/app/src/main/java/org/betterx/betterend/world/surface/VerticalBandNoiseCondition.java:3: error: package org.betterx.bclib.interfaces does not exist
+import org.betterx.bclib.interfaces.NumericProvider;
+                                   ^
+/app/src/main/java/org/betterx/betterend/world/surface/VerticalBandNoiseCondition.java:4: error: package org.betterx.bclib.mixin.common does not exist
+import org.betterx.bclib.mixin.common.SurfaceRulesContextAccessor;
+                                     ^
+/app/src/main/java/org/betterx/betterend/world/surface/VerticalBandNoiseCondition.java:13: error: cannot find symbol
+public class VerticalBandNoiseCondition implements NumericProvider {
+                                                   ^
+  symbol: class NumericProvider
+/app/src/main/java/org/betterx/betterend/world/surface/VerticalBandNoiseCondition.java:52: error: cannot find symbol
+    public int getNumber(SurfaceRulesContextAccessor context) {
+                         ^
+  symbol:   class SurfaceRulesContextAccessor
+  location: class VerticalBandNoiseCondition
+/app/src/main/java/org/betterx/betterend/world/surface/VerticalBandNoiseCondition.java:65: error: cannot find symbol
+    public Codec<? extends NumericProvider> pcodec() {
+                           ^
+  symbol:   class NumericProvider
+  location: class VerticalBandNoiseCondition
+/app/src/main/java/org/betterx/betterend/world/biome/cave/EmptyAuroraCaveBiome.java:3: error: package org.betterx.bclib.api.v2.levelgen.biomes does not exist
+import org.betterx.bclib.api.v2.levelgen.biomes.BCLBiome;
+                                               ^
+/app/src/main/java/org/betterx/betterend/world/biome/cave/EmptyAuroraCaveBiome.java:4: error: package org.betterx.bclib.api.v2.levelgen.biomes does not exist
+import org.betterx.bclib.api.v2.levelgen.biomes.BCLBiomeBuilder;
+                                               ^
+/app/src/main/java/org/betterx/betterend/world/biome/cave/EmptyAuroraCaveBiome.java:5: error: package org.betterx.bclib.api.v2.levelgen.biomes.BCLBiomeBuilder does not exist
+import org.betterx.bclib.api.v2.levelgen.biomes.BCLBiomeBuilder.BiomeSupplier;
+                                                               ^
+/app/src/main/java/org/betterx/betterend/world/biome/cave/EmptyAuroraCaveBiome.java:6: error: package org.betterx.bclib.api.v2.levelgen.biomes does not exist
+import org.betterx.bclib.api.v2.levelgen.biomes.BCLBiomeSettings;
+                                               ^
+/app/src/main/java/org/betterx/betterend/world/biome/cave/EmptyAuroraCaveBiome.java:7: error: package org.betterx.bclib.interfaces does not exist
+import org.betterx.bclib.interfaces.SurfaceMaterialProvider;
+                                   ^
+/app/src/main/java/org/betterx/betterend/world/biome/cave/EmptyAuroraCaveBiome.java:8: error: cannot find symbol
+import org.betterx.bclib.util.WeightedList;
+                             ^
+  symbol:   class WeightedList
+  location: package org.betterx.bclib.util
+/app/src/main/java/org/betterx/betterend/world/biome/cave/EndCaveBiome.java:3: error: package org.betterx.bclib.api.v2.levelgen.biomes does not exist
+import org.betterx.bclib.api.v2.levelgen.biomes.BCLBiome;
+                                               ^
+/app/src/main/java/org/betterx/betterend/world/biome/cave/EndCaveBiome.java:4: error: package org.betterx.bclib.api.v2.levelgen.biomes does not exist
+import org.betterx.bclib.api.v2.levelgen.biomes.BCLBiomeBuilder;
+                                               ^
+/app/src/main/java/org/betterx/betterend/world/biome/cave/EndCaveBiome.java:5: error: package org.betterx.bclib.api.v2.levelgen.biomes.BCLBiomeBuilder does not exist
+import org.betterx.bclib.api.v2.levelgen.biomes.BCLBiomeBuilder.BiomeSupplier;
+                                                               ^
+/app/src/main/java/org/betterx/betterend/world/biome/cave/EndCaveBiome.java:6: error: package org.betterx.bclib.api.v2.levelgen.biomes does not exist
+import org.betterx.bclib.api.v2.levelgen.biomes.BCLBiomeSettings;
+                                               ^
+/app/src/main/java/org/betterx/betterend/world/biome/cave/EndCaveBiome.java:7: error: package org.betterx.bclib.api.v3.levelgen.features does not exist
+import org.betterx.bclib.api.v3.levelgen.features.BCLFeature;
+                                                 ^
+/app/src/main/java/org/betterx/betterend/world/biome/cave/EndCaveBiome.java:8: error: package org.betterx.bclib.api.v3.levelgen.features does not exist
+import org.betterx.bclib.api.v3.levelgen.features.BCLFeatureBuilder;
+                                                 ^
+/app/src/main/java/org/betterx/betterend/world/biome/cave/EndCaveBiome.java:9: error: package org.betterx.bclib.interfaces does not exist
+import org.betterx.bclib.interfaces.SurfaceMaterialProvider;
+                                   ^
+/app/src/main/java/org/betterx/betterend/world/biome/cave/EndCaveBiome.java:10: error: cannot find symbol
+import org.betterx.bclib.util.WeightedList;
+                             ^
+  symbol:   class WeightedList
+  location: package org.betterx.bclib.util
+/app/src/main/java/org/betterx/betterend/world/biome/EndBiome.java:3: error: package org.betterx.bclib.api.v2.levelgen.biomes does not exist
+import org.betterx.bclib.api.v2.levelgen.biomes.BCLBiome;
+                                               ^
+/app/src/main/java/org/betterx/betterend/world/biome/EndBiome.java:4: error: package org.betterx.bclib.api.v2.levelgen.biomes does not exist
+import org.betterx.bclib.api.v2.levelgen.biomes.BCLBiomeBuilder;
+                                               ^
+/app/src/main/java/org/betterx/betterend/world/biome/EndBiome.java:5: error: package org.betterx.bclib.api.v2.levelgen.biomes.BCLBiomeBuilder does not exist
+import org.betterx.bclib.api.v2.levelgen.biomes.BCLBiomeBuilder.BiomeSupplier;
+                                                               ^
+/app/src/main/java/org/betterx/betterend/world/biome/EndBiome.java:6: error: package org.betterx.bclib.api.v2.levelgen.biomes does not exist
+import org.betterx.bclib.api.v2.levelgen.biomes.BCLBiomeSettings;
+                                               ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+100 errors
+only showing the first 100 errors, of 6638 total; use -Xmaxerrs if you would like to see more
+
+> Task :compileJava FAILED
+
 FAILURE: Build failed with an exception.
 
-* Where:
-Build file '/app/build.gradle' line: 19
-
 * What went wrong:
-Plugin [id: 'net.neoforged.moddev', version: '2.0.74-beta'] was not found in any of the following sources:
-
-- Gradle Core Plugins (plugin is not in 'org.gradle' namespace)
-- Included Builds (No included builds contain this plugin)
-- Plugin Repositories (could not resolve plugin artifact 'net.neoforged.moddev:net.neoforged.moddev.gradle.plugin:2.0.74-beta')
-  Searched in the following repositories:
-    maven(https://maven.neoforged.net/releases)
-    Gradle Central Plugin Repository
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
 
 * Try:
-> Run with --stacktrace option to get the stack trace.
-> Run with --info or --debug option to get more log output.
+> Run with --info option to get more log output.
 > Run with --scan to get full insights.
-> Get more help at https://help.gradle.org.
 
-BUILD FAILED in 22s
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.8/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 4m 28s
+2 actionable tasks: 2 executed

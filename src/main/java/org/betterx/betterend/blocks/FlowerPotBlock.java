@@ -1,7 +1,7 @@
 package org.betterx.betterend.blocks;
 
 import org.betterx.bclib.behaviours.interfaces.BehaviourStone;
-import org.betterx.bclib.blocks.BaseBlockNotFull;
+import net.minecraft.world.level.block.Block;
 import org.betterx.bclib.client.models.BasePatterns;
 import org.betterx.bclib.client.models.ModelsHelper;
 import org.betterx.bclib.client.models.ModelsHelper.MultiPartBuilder;
@@ -71,7 +71,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-public class FlowerPotBlock extends BaseBlockNotFull implements RenderLayerProvider, PostInitable {
+public class FlowerPotBlock extends Block implements RenderLayerProvider, PostInitable {
     private static final IntegerProperty PLANT_ID = EndBlockProperties.PLANT_ID;
     private static final IntegerProperty SOIL_ID = EndBlockProperties.SOIL_ID;
     private static final IntegerProperty POT_LIGHT = EndBlockProperties.POT_LIGHT;

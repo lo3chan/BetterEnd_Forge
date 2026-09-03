@@ -2,7 +2,7 @@ package org.betterx.betterend.blocks;
 
 import org.betterx.bclib.behaviours.BehaviourBuilders;
 import org.betterx.bclib.behaviours.interfaces.BehaviourPlant;
-import org.betterx.bclib.blocks.BaseAttachedBlock;
+import net.minecraft.world.level.block.FaceAttachedHorizontalDirectionalBlock;
 import org.betterx.bclib.client.render.BCLRenderLayer;
 import org.betterx.bclib.interfaces.RenderLayerProvider;
 import org.betterx.bclib.items.tool.BaseShearsItem;
@@ -43,7 +43,7 @@ import java.util.EnumMap;
 import java.util.List;
 import java.util.Optional;
 
-public class SmallJellyshroomBlock extends BaseAttachedBlock implements RenderLayerProvider, BonemealableBlock, PottablePlant, BehaviourPlant {
+public class SmallJellyshroomBlock extends FaceAttachedHorizontalDirectionalBlock implements RenderLayerProvider, BonemealableBlock, PottablePlant, BehaviourPlant {
     private static final EnumMap<Direction, VoxelShape> BOUNDING_SHAPES = Maps.newEnumMap(Direction.class);
 
     public SmallJellyshroomBlock() {

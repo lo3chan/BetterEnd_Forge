@@ -1,6 +1,6 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.blocks.BaseBlockNotFull;
+import net.minecraft.world.level.block.Block;
 import org.betterx.bclib.client.render.BCLRenderLayer;
 import org.betterx.bclib.interfaces.RenderLayerProvider;
 import org.betterx.bclib.interfaces.tools.AddMineableHoe;
@@ -31,7 +31,7 @@ import com.google.common.collect.Lists;
 import java.util.Queue;
 
 @SuppressWarnings("deprecation")
-public class MengerSpongeBlock extends BaseBlockNotFull implements RenderLayerProvider, AddMineableHoe {
+public class MengerSpongeBlock extends Block implements RenderLayerProvider, AddMineableHoe {
     private static final VoxelShape SHAPE;
 
     public MengerSpongeBlock() {

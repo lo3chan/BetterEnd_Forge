@@ -1,6 +1,6 @@
 package org.betterx.betterend.blocks.basis;
 
-import org.betterx.bclib.blocks.BaseBlockNotFull;
+import net.minecraft.world.level.block.Block;
 import org.betterx.bclib.blocks.BlockProperties;
 import org.betterx.bclib.client.models.ModelsHelper;
 import org.betterx.bclib.interfaces.TagProvider;
@@ -59,7 +59,7 @@ import java.util.Optional;
 import java.util.function.ToIntFunction;
 import org.jetbrains.annotations.Nullable;
 
-public class PedestalBlock extends BaseBlockNotFull implements EntityBlock, TagProvider {
+public class PedestalBlock extends Block implements EntityBlock, TagProvider {
     public final static EnumProperty<PedestalState> STATE = EndBlockProperties.PEDESTAL_STATE;
     public static final BooleanProperty HAS_ITEM = EndBlockProperties.HAS_ITEM;
     public static final BooleanProperty HAS_LIGHT = BlockProperties.HAS_LIGHT;

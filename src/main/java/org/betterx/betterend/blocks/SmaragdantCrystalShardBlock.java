@@ -1,7 +1,7 @@
 package org.betterx.betterend.blocks;
 
 import org.betterx.bclib.behaviours.BehaviourBuilders;
-import org.betterx.bclib.blocks.BaseAttachedBlock;
+import net.minecraft.world.level.block.FaceAttachedHorizontalDirectionalBlock;
 import org.betterx.bclib.client.render.BCLRenderLayer;
 import org.betterx.bclib.interfaces.RenderLayerProvider;
 import org.betterx.bclib.interfaces.tools.AddMineablePickaxe;
@@ -33,7 +33,7 @@ import com.google.common.collect.Maps;
 import java.util.EnumMap;
 
 @SuppressWarnings("deprecation")
-public class SmaragdantCrystalShardBlock extends BaseAttachedBlock implements AddMineablePickaxe, RenderLayerProvider, SimpleWaterloggedBlock, LiquidBlockContainer {
+public class SmaragdantCrystalShardBlock extends FaceAttachedHorizontalDirectionalBlock implements AddMineablePickaxe, RenderLayerProvider, SimpleWaterloggedBlock, LiquidBlockContainer {
     private static final EnumMap<Direction, VoxelShape> BOUNDING_SHAPES = Maps.newEnumMap(Direction.class);
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 

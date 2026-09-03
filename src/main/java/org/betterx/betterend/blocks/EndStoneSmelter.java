@@ -1,7 +1,7 @@
 package org.betterx.betterend.blocks;
 
 import org.betterx.bclib.behaviours.BehaviourBuilders;
-import org.betterx.bclib.blocks.BaseBlockWithEntity;
+import net.minecraft.world.level.block.BaseEntityBlock;
 import org.betterx.bclib.interfaces.AlloyingRecipeWorkstation;
 import org.betterx.betterend.blocks.entities.EndStoneSmelterBlockEntity;
 import org.betterx.betterend.registry.EndBlockEntities;

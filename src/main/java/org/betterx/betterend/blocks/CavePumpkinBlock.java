@@ -1,6 +1,6 @@
 package org.betterx.betterend.blocks;
 
-import org.betterx.bclib.blocks.BaseBlockNotFull;
+import net.minecraft.world.level.block.Block;
 import org.betterx.bclib.blocks.BlockProperties;
 import org.betterx.bclib.client.render.BCLRenderLayer;
 import org.betterx.bclib.interfaces.RenderLayerProvider;
@@ -24,7 +24,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import java.util.Collections;
 import java.util.List;
 
-public class CavePumpkinBlock extends BaseBlockNotFull implements RenderLayerProvider {
+public class CavePumpkinBlock extends Block implements RenderLayerProvider {
     public static final BooleanProperty SMALL = BlockProperties.SMALL;
     private static final VoxelShape SHAPE_SMALL;
     private static final VoxelShape SHAPE_BIG;
